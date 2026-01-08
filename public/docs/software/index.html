@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Software how-to# Guide and general tips on using MASLAB software and other software to interact with sensors and actuators on the robot. Checkout electrical how-to to learn how to connect the hardwares.
+Prerequisites# Raven board fully soldered and installed onto the Pi. Raspberry Pi 5 fully set up and connected to internet. Install and update MASLAB software# DO NOT USE THE BATTERY WHILE UPDATING MASLAB SOFTWARE. POWER THE SYSTEM WITH THE USB-C POWER ADAPTER INSTEAD. The power from the battery to the Pi is managed by Raven such that the update process will disturb its operation and cause the entire system to turn off.
+">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://192.168.0.217:1313/docs/software/">
+  <meta property="og:site_name" content="MASLAB wiki">
+  <meta property="og:title" content="Software">
+  <meta property="og:description" content="Software how-to# Guide and general tips on using MASLAB software and other software to interact with sensors and actuators on the robot. Checkout electrical how-to to learn how to connect the hardwares.
+Prerequisites# Raven board fully soldered and installed onto the Pi. Raspberry Pi 5 fully set up and connected to internet. Install and update MASLAB software# DO NOT USE THE BATTERY WHILE UPDATING MASLAB SOFTWARE. POWER THE SYSTEM WITH THE USB-C POWER ADAPTER INSTEAD. The power from the battery to the Pi is managed by Raven such that the update process will disturb its operation and cause the entire system to turn off.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="docs">
+
+
+  <meta itemprop="name" content="Software">
+  <meta itemprop="description" content="Software how-to# Guide and general tips on using MASLAB software and other software to interact with sensors and actuators on the robot. Checkout electrical how-to to learn how to connect the hardwares.
+Prerequisites# Raven board fully soldered and installed onto the Pi. Raspberry Pi 5 fully set up and connected to internet. Install and update MASLAB software# DO NOT USE THE BATTERY WHILE UPDATING MASLAB SOFTWARE. POWER THE SYSTEM WITH THE USB-C POWER ADAPTER INSTEAD. The power from the battery to the Pi is managed by Raven such that the update process will disturb its operation and cause the entire system to turn off.">
+  <meta itemprop="wordCount" content="1342">
+
+<title>Software | MASLAB wiki</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="http://192.168.0.217:1313/docs/software/">
+<link rel="stylesheet" href="/book.min.cc2c524ed250aac81b23d1f4af87344917b325208841feca0968fe450f570575.css" integrity="sha256-zCxSTtJQqsgbI9H0r4c0SRezJSCIQf7KCWj&#43;RQ9XBXU=" crossorigin="anonymous">
+
+
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.dca74a6d40e9aaf67eb0de558ffb9d0b3406468c0cbc51a98779b9bf133bdbcf.js" integrity="sha256-3KdKbUDpqvZ&#43;sN5Vj/udCzQGRowMvFGph3m5vxM7288=" crossorigin="anonymous"></script>
+
+
+
+  
+</head>
+<body dir="ltr" class="book-kind-page book-type-docs">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>MASLAB wiki</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input id="book-search-input" type="text" 
+    placeholder="Search"
+    aria-label="Search"
+    maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/introduction/" class="">
+      Introduction</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/electrical/" class="">
+      Electrical</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/raspberry-pi/" class="">
+      Raspberry Pi</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/git/" class="">
+      Git</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/software/" class="active">
+      Software</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/battery/" class="">
+      Battery</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/camera/" class="">
+      Camera</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header hidden">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/icons/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>Software</h3>
+
+  <label for="toc-control">
+    
+    <img src="/icons/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#prerequisites">Prerequisites</a></li>
+    <li><a href="#install-and-update-maslab-software">Install and update MASLAB software</a></li>
+    <li><a href="#developing-with-python-and-vscode">Developing with Python and VSCode</a></li>
+    <li><a href="#maslab-software-library">MASLAB software library</a>
+      <ul>
+        <li><a href="#import-raven">Import Raven</a></li>
+      </ul>
+    </li>
+    <li><a href="#dc-motors">DC Motors</a>
+      <ul>
+        <li><a href="#encoder">Encoder</a></li>
+        <li><a href="#motor">Motor</a></li>
+      </ul>
+    </li>
+    <li><a href="#servos">Servos</a></li>
+    <li><a href="#whats-next">What&rsquo;s next?</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h1 id="software-how-to">Software how-to<a class="anchor" href="#software-how-to">#</a></h1>
+<p>Guide and general tips on using MASLAB software and other software to interact with sensors and actuators on the robot. Checkout <a href="2-Electrical#connecting">electrical how-to</a> to learn how to connect the hardwares.</p>
+<h2 id="prerequisites">Prerequisites<a class="anchor" href="#prerequisites">#</a></h2>
+<ol>
+<li>Raven board <a href="2-Electrical#soldering">fully soldered</a> and <a href="2-Electrical#pi-connection">installed onto the Pi</a>.</li>
+<li>Raspberry Pi 5 <a href="3-Raspberry-Pi#setting-up-the-pi">fully set up</a> and <a href="3-Raspberry-Pi#connecting-the-pi-to-mit-wifi">connected to internet</a>.</li>
+</ol>
+<h2 id="install-and-update-maslab-software">Install and update MASLAB software<a class="anchor" href="#install-and-update-maslab-software">#</a></h2>
+<blockquote class='book-hint caution'>
+<p><strong>DO NOT USE THE BATTERY WHILE UPDATING MASLAB SOFTWARE. POWER THE SYSTEM WITH THE USB-C POWER ADAPTER INSTEAD.</strong>
+The power from the battery to the Pi is managed by Raven such that the update process will disturb its operation and cause the entire system to turn off.</p></blockquote><p>Raven board is completely new! That also means it comes with no firmware installed. Therefore, we need to deploy the firmware by <a href="3-Raspberry-Pi#using-the-pi">running this command</a> on the Pi:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>maslab-update</span></span></code></pre></div><p>If everything goes well, you should see something similar to this in your shell:</p>
+<!-- raw HTML omitted -->
+<p>This command will grab the latest version of the Raven firmware and deploy it on the Raven, so make sure Raven is installed on the Pi before running this command. It will also install the latest version of our software library to use Raven.</p>
+<blockquote class='book-hint tip'>
+<p>MASLAB will always be a work in progress. We may release updated versions of Raven firmware and software library as we (and you) discover bugs and improve our software. Therefore, remember to run this command again when we announce software updates.</p></blockquote><h2 id="developing-with-python-and-vscode">Developing with Python and VSCode<a class="anchor" href="#developing-with-python-and-vscode">#</a></h2>
+<p>If you are using VSCode for developing and <a href="3-Raspberry-Pi#connecting-with-vscode">connecting to the Pi</a>, it is highly recommended to also install VSCode&rsquo;s <a href="https://marketplace.visualstudio.com/items?itemName=ms-python.python">Python extension</a>.</p>
+<p>If you are not familiar with Python, please follow VSCode&rsquo;s tutorial on how to develop with Python: <a href="https://code.visualstudio.com/docs/python/python-tutorial">https://code.visualstudio.com/docs/python/python-tutorial</a>.</p>
+<p>And of course please feel free to ask course staffs any question!</p>
+<h2 id="maslab-software-library">MASLAB software library<a class="anchor" href="#maslab-software-library">#</a></h2>
+<p>MASLAB staffs maintain a Python library that supports using the motors and servos on the Raven board (<code>raven</code>).</p>
+<blockquote class='book-hint important'>
+<p>Since these library is communicating with a hardware, no two instances may run at the same time. <strong>DO NOT</strong> have two different Python scripts trying to use Raven.</p></blockquote><p>The library is available at <a href="https://github.com/MASLAB/maslab-lib">https://github.com/MASLAB/maslab-lib</a>.</p>
+<h3 id="import-raven">Import Raven<a class="anchor" href="#import-raven">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Python" data-lang="Python"><span style="display:flex;"><span><span style="color:#f92672">from</span> raven <span style="color:#f92672">import</span> Raven
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>raven_board <span style="color:#f92672">=</span> Raven()</span></span></code></pre></div><h2 id="dc-motors">DC Motors<a class="anchor" href="#dc-motors">#</a></h2>
+<blockquote class='book-hint important'>
+<p>The motor is powered by the battery such that your Pi + Raven setup needs to be <a href="5-Battery#using-pi-with-battery">powered by the battery</a> to run the motor.
+The provided motor is a <strong>POWERFUL</strong> motor. Please have it secured to your table / robot before testing. Test at low speed / torque before going full power!</p></blockquote><p>DC motors may come with encoders to estimate how many rotation has the motor rotated. To increase the resolution of the encoder, the encoder spins with some gear ratio with respect to the motor, which also has another gear ratio. For example, the provided motor is a 50:1 motor with an encoder that does 64 counts per revolution (also called pulse per revolution). This means the encoder will count 50 * 64 = 3200 counts per motor rotation.</p>
+<p>Raven supports up to <a href="2-Electrical#motor-connection">5 DC motors with encoders</a>.</p>
+<h3 id="encoder">Encoder<a class="anchor" href="#encoder">#</a></h3>
+<p>With Raven, you can get the encoder values. You can also set them to a new initial value. Here is an example of how to use it:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Python" data-lang="Python"><span style="display:flex;"><span>raven_board<span style="color:#f92672">.</span>set_motor_encoder(Raven<span style="color:#f92672">.</span>MotorChannel<span style="color:#f92672">.</span>CH1, <span style="color:#ae81ff">0</span>) <span style="color:#75715e"># Set encoder count for motor 1 to zero</span>
+</span></span><span style="display:flex;"><span>print(raven_board<span style="color:#f92672">.</span>get_motor_encoder(Raven<span style="color:#f92672">.</span>MotorChannel<span style="color:#f92672">.</span>CH1)) <span style="color:#75715e"># Print encoder count = &#34;0&#34;</span></span></span></code></pre></div><blockquote class='book-hint important'>
+<p>Encoder count should matches with the motor direction. To test, run the motor with direct mode (see <a href="#direct-mode">direct mode</a>) and read out encoder reading. When motor is going forward (<code>reverse=False</code>), encoder counts should go up. If not, swap the C1 and C2 wires. See <a href="2-Electrical#motor-connection">motor connection</a> for more information.</p></blockquote><h3 id="motor">Motor<a class="anchor" href="#motor">#</a></h3>
+<p>There are 3 ways to drive the motors:</p>
+<ul>
+<li>Direct - Motor moves according to a torque and speed factor. We recommend driving in direct mode first to get things started.</li>
+<li>Position (requires encoder) - Motor moves to an encoder position with PID control</li>
+<li>Velocity (requires encoder) - Motor moves with a set encoder velocity using PID control</li>
+<li>Disabled - Turn off the motor</li>
+</ul>
+<p>To use the motors, make sure you have <a href="#import-raven">imported Raven</a>. Then follow the following examples for each mode.</p>
+<blockquote class='book-hint tip'>
+<p>Once motor mode and PID values are set, you can set motor drive values without having to set the mode and PID values again.</p></blockquote><h4 id="direct-mode">Direct mode<a class="anchor" href="#direct-mode">#</a></h4>
+<p>In direct mode, you get to set the torque factor as 0% to 100% of available torque. You also get to set the speed as 0% to 100% of max speed and a direction of rotation. These conditions are subjected to the battery&rsquo;s voltage. Do this for most reliable actuation or custom controls. Also useful as a part of mechanical designs.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Python" data-lang="Python"><span style="display:flex;"><span>raven_board<span style="color:#f92672">.</span>set_motor_mode(Raven<span style="color:#f92672">.</span>MotorChannel<span style="color:#f92672">.</span>CH1, Raven<span style="color:#f92672">.</span>MotorMode<span style="color:#f92672">.</span>DIRECT) <span style="color:#75715e"># Set motor mode to DIRECT</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Speed controlled:</span>
+</span></span><span style="display:flex;"><span>raven_board<span style="color:#f92672">.</span>set_motor_torque_factor(Raven<span style="color:#f92672">.</span>MotorChannel<span style="color:#f92672">.</span>CH1, <span style="color:#ae81ff">100</span>) <span style="color:#75715e"># Let the motor use all the torque to get to speed factor</span>
+</span></span><span style="display:flex;"><span>raven_board<span style="color:#f92672">.</span>set_motor_speed_factor(Raven<span style="color:#f92672">.</span>MotorChannel<span style="color:#f92672">.</span>CH1, <span style="color:#ae81ff">10</span>, reverse<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>) <span style="color:#75715e"># Spin at 10% max speed in reverse</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Torque controlled:</span>
+</span></span><span style="display:flex;"><span>raven_board<span style="color:#f92672">.</span>set_motor_speed_factor(Raven<span style="color:#f92672">.</span>MotorChannel<span style="color:#f92672">.</span>CH1, <span style="color:#ae81ff">100</span>) <span style="color:#75715e"># Make motor try to run at max speed forward</span>
+</span></span><span style="display:flex;"><span>raven_board<span style="color:#f92672">.</span>set_motor_torque_factor(Raven<span style="color:#f92672">.</span>MotorChannel<span style="color:#f92672">.</span>CH1, <span style="color:#ae81ff">10</span>) <span style="color:#75715e"># Let it use up to 10% available torque</span></span></span></code></pre></div><h4 id="controlled-mode">Controlled mode<a class="anchor" href="#controlled-mode">#</a></h4>
+<blockquote class='book-hint important'>
+<p>The control loop for Raven motor runs at 1kHz (dt = 0.001). This will be important to playing with PID values.</p></blockquote><blockquote class='book-hint caution'>
+<p>The PID values provided are only as examples. They are untested and may not work for your motors. Here is some tip to tune the values:</p>
+<ol>
+<li>Start with some P and adjust until your motor starts going to desired target quickly but may not reach / little overshoot.</li>
+<li>Include I and adjust until your motor gets up to target set point quickly and settle to correct target point with some overshoot.</li>
+<li>Include D and adjust until your motor get to set point still quickly and correctly but does not overshoot.</li>
+</ol>
+<p>Often time you only needs PI or PD to control your motors. Here is also a great video to demonstrate the effects of PID: <a href="https://www.youtube.com/watch?v=fusr9eTceEo">https://www.youtube.com/watch?v=fusr9eTceEo</a></p></blockquote><blockquote class='book-hint tip'>
+<p>Check control theory lecture notes to refresh about PID control: <a href="https://maslab.mit.edu/2025/lectures">https://maslab.mit.edu/2025/lectures</a></p></blockquote><p>For controlled modes, you will need to provide a current limit for the motor effort. Maximum allowed current is 6.4 amps.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>raven_board<span style="color:#f92672">.</span>set_motor_max_current(Raven<span style="color:#f92672">.</span>MotorChannel<span style="color:#f92672">.</span>CH1, <span style="color:#ae81ff">5</span>) <span style="color:#75715e"># Set motor current to 5 amps</span></span></span></code></pre></div><h5 id="position-controlled">Position controlled<a class="anchor" href="#position-controlled">#</a></h5>
+<p>In position controlled mode, you get to set the PID value for the controller and a target in encoder counts.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Python" data-lang="Python"><span style="display:flex;"><span>raven_board<span style="color:#f92672">.</span>set_motor_encoder(Raven<span style="color:#f92672">.</span>MotorChannel<span style="color:#f92672">.</span>CH1, <span style="color:#ae81ff">0</span>) <span style="color:#75715e"># Reset encoder</span>
+</span></span><span style="display:flex;"><span>raven_board<span style="color:#f92672">.</span>set_motor_max_current(Raven<span style="color:#f92672">.</span>MotorChannel<span style="color:#f92672">.</span>CH1, <span style="color:#ae81ff">5</span>) <span style="color:#75715e"># Set motor current to 5 amps</span>
+</span></span><span style="display:flex;"><span>raven_board<span style="color:#f92672">.</span>set_motor_mode(Raven<span style="color:#f92672">.</span>MotorChannel<span style="color:#f92672">.</span>CH1, Raven<span style="color:#f92672">.</span>MotorMode<span style="color:#f92672">.</span>POSITION) <span style="color:#75715e"># Set motor mode to POSITION</span>
+</span></span><span style="display:flex;"><span>raven_board<span style="color:#f92672">.</span>set_motor_pid(Raven<span style="color:#f92672">.</span>MotorChannel<span style="color:#f92672">.</span>CH1, p_gain <span style="color:#f92672">=</span> <span style="color:#ae81ff">100</span>, i_gain <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, d_gain <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>) <span style="color:#75715e"># Set PID values</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Make the motor spin until 4400 counts (10 rev of wheel motor)</span>
+</span></span><span style="display:flex;"><span>raven_board<span style="color:#f92672">.</span>set_motor_target(Raven<span style="color:#f92672">.</span>MotorChannel<span style="color:#f92672">.</span>CH1, <span style="color:#ae81ff">4400</span>)</span></span></code></pre></div><h5 id="velocity-controlled">Velocity controlled<a class="anchor" href="#velocity-controlled">#</a></h5>
+<p>In velocity controlled mode, you also get to set PID value and target in encoder counts per second.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Python" data-lang="Python"><span style="display:flex;"><span>raven_board<span style="color:#f92672">.</span>set_motor_encoder(Raven<span style="color:#f92672">.</span>MotorChannel<span style="color:#f92672">.</span>CH1, <span style="color:#ae81ff">0</span>) <span style="color:#75715e"># Reset encoder</span>
+</span></span><span style="display:flex;"><span>raven_board<span style="color:#f92672">.</span>set_motor_max_current(Raven<span style="color:#f92672">.</span>MotorChannel<span style="color:#f92672">.</span>CH1, <span style="color:#ae81ff">5</span>) <span style="color:#75715e"># Set motor current to 5 amps</span>
+</span></span><span style="display:flex;"><span>raven_board<span style="color:#f92672">.</span>set_motor_mode(Raven<span style="color:#f92672">.</span>MotorChannel<span style="color:#f92672">.</span>CH1, Raven<span style="color:#f92672">.</span>MotorMode<span style="color:#f92672">.</span>VELOCITY) <span style="color:#75715e"># Set motor mode to POSITION</span>
+</span></span><span style="display:flex;"><span>raven_board<span style="color:#f92672">.</span>set_motor_pid(Raven<span style="color:#f92672">.</span>MotorChannel<span style="color:#f92672">.</span>CH1, p_gain <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>, i_gain <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, d_gain <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>) <span style="color:#75715e"># Set PID values</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Make the motor spin at -4400 counts/second (-10 rev/sec of wheel motor)</span>
+</span></span><span style="display:flex;"><span>raven_board<span style="color:#f92672">.</span>set_motor_target(Raven<span style="color:#f92672">.</span>MotorChannel<span style="color:#f92672">.</span>CH1, <span style="color:#f92672">-</span><span style="color:#ae81ff">4400</span>)</span></span></code></pre></div><h2 id="servos">Servos<a class="anchor" href="#servos">#</a></h2>
+<p>Servos are position controlled motors that can move from -90 degree to 90 degree. Their signal is based on a <a href="https://en.wikipedia.org/wiki/Servo_control">timed pulse</a>. Typically, 1000us means -90 degree and 2000us means 90 degree. Some servo may have different values.</p>
+<!-- raw HTML omitted -->
+<p>Raven board supports up to <a href="2-Electrical#servo-connection">4 servos</a>. For each servo, you get to set the position in degree. Optionally, you can set the minimum and maximum pulse microsecond as <code>min_us</code> and <code>max_us</code> for you appropriate motor. Otherwise, they are defaulted to <code>min_us=1000</code> and <code>max_us=2000</code>. Here is an example of how to use them once you have <a href="#import-raven">imported Raven</a>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Python" data-lang="Python"><span style="display:flex;"><span><span style="color:#75715e"># Set the servo 1 to -75 degrees with custom pulse microseconds</span>
+</span></span><span style="display:flex;"><span>raven_board<span style="color:#f92672">.</span>set_servo_position(Raven<span style="color:#f92672">.</span>ServoChannel<span style="color:#f92672">.</span>CH1, <span style="color:#f92672">-</span><span style="color:#ae81ff">75</span>, min_us<span style="color:#f92672">=</span><span style="color:#ae81ff">500</span>, max_us<span style="color:#f92672">=</span><span style="color:#ae81ff">2500</span>)</span></span></code></pre></div><h2 id="whats-next">What&rsquo;s next?<a class="anchor" href="#whats-next">#</a></h2>
+<p>Now that you have the software and firmware to run Raven. <strong>AFTER</strong> the battery lecture and reviewing the <a href="5-Battery">battery guide</a>. Feel free to power your Pi <a href="5-Battery#using-pi-with-battery">with the battery</a> and see if you can make your motors and servos move!</p>
+<p>Once you are familiar with using the Pi and the MASLAB library to interact with Raven, you can start thinking about writing and testing out your robot software. To keep your software development progress organized, we will be using <a href="https://en.wikipedia.org/wiki/Git">Git version control system</a>. Checkout <a href="6-Git">Git guide</a> to &ldquo;git&rdquo; started.</p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+<div>
+
+</div>
+
+<div>
+
+</div>
+
+</div>
+
+
+
+
+
+  
+  
+  
+  <div class="flex flex-wrap justify-between">
+    <span>
+    
+      <a href="/docs/git/" class="flex align-center">
+        <img src="/icons/backward.svg" class="book-icon" alt="Backward" />
+        <span>Git</span>
+      </a>
+    
+    </span>
+    <span>
+    
+      <a href="/docs/battery/" class="flex align-center">
+        <span>Battery</span>
+        <img src="/icons/forward.svg" class="book-icon" alt="Forward" />
+      </a>
+    
+    </span>
+  </div>
+  
+
+
+ 
+        
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+        
+        
+  
+ 
+        
+  
+  
+    <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
+  
+
+      </footer>
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+  
+  <aside class="book-toc">
+    <div class="book-toc-content">
+      
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#prerequisites">Prerequisites</a></li>
+    <li><a href="#install-and-update-maslab-software">Install and update MASLAB software</a></li>
+    <li><a href="#developing-with-python-and-vscode">Developing with Python and VSCode</a></li>
+    <li><a href="#maslab-software-library">MASLAB software library</a>
+      <ul>
+        <li><a href="#import-raven">Import Raven</a></li>
+      </ul>
+    </li>
+    <li><a href="#dc-motors">DC Motors</a>
+      <ul>
+        <li><a href="#encoder">Encoder</a></li>
+        <li><a href="#motor">Motor</a></li>
+      </ul>
+    </li>
+    <li><a href="#servos">Servos</a></li>
+    <li><a href="#whats-next">What&rsquo;s next?</a></li>
+  </ul>
+</nav>
+
+
+
+    </div>
+  </aside>
+  
+ 
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

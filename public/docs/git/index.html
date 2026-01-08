@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Git how-to# Git is a software version control system to keep track of changes to your software development project. Git allows you to make and keep track of small updates (“commits”) as you develop your software. These commits should be safe checkpoints with descriptions of what changed such that you can revert to if your latest changes immobilize or destroy your robot. As such, they are also a great way to document your progress. Git also allows you to prototype with a separate copy of the software without affecting the main copy (“branch” out). Therefore, it is also a great tool to collaborate with others as you can have separate copies of the software and develop independently.
+">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://192.168.0.217:1313/docs/git/">
+  <meta property="og:site_name" content="MASLAB wiki">
+  <meta property="og:title" content="Git">
+  <meta property="og:description" content="Git how-to# Git is a software version control system to keep track of changes to your software development project. Git allows you to make and keep track of small updates (“commits”) as you develop your software. These commits should be safe checkpoints with descriptions of what changed such that you can revert to if your latest changes immobilize or destroy your robot. As such, they are also a great way to document your progress. Git also allows you to prototype with a separate copy of the software without affecting the main copy (“branch” out). Therefore, it is also a great tool to collaborate with others as you can have separate copies of the software and develop independently.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="docs">
+
+
+  <meta itemprop="name" content="Git">
+  <meta itemprop="description" content="Git how-to# Git is a software version control system to keep track of changes to your software development project. Git allows you to make and keep track of small updates (“commits”) as you develop your software. These commits should be safe checkpoints with descriptions of what changed such that you can revert to if your latest changes immobilize or destroy your robot. As such, they are also a great way to document your progress. Git also allows you to prototype with a separate copy of the software without affecting the main copy (“branch” out). Therefore, it is also a great tool to collaborate with others as you can have separate copies of the software and develop independently.">
+  <meta itemprop="wordCount" content="593">
+
+<title>Git | MASLAB wiki</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="http://192.168.0.217:1313/docs/git/">
+<link rel="stylesheet" href="/book.min.cc2c524ed250aac81b23d1f4af87344917b325208841feca0968fe450f570575.css" integrity="sha256-zCxSTtJQqsgbI9H0r4c0SRezJSCIQf7KCWj&#43;RQ9XBXU=" crossorigin="anonymous">
+
+
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.dca74a6d40e9aaf67eb0de558ffb9d0b3406468c0cbc51a98779b9bf133bdbcf.js" integrity="sha256-3KdKbUDpqvZ&#43;sN5Vj/udCzQGRowMvFGph3m5vxM7288=" crossorigin="anonymous"></script>
+
+
+
+  
+</head>
+<body dir="ltr" class="book-kind-page book-type-docs">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>MASLAB wiki</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input id="book-search-input" type="text" 
+    placeholder="Search"
+    aria-label="Search"
+    maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/introduction/" class="">
+      Introduction</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/electrical/" class="">
+      Electrical</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/raspberry-pi/" class="">
+      Raspberry Pi</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/git/" class="active">
+      Git</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/software/" class="">
+      Software</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/battery/" class="">
+      Battery</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/camera/" class="">
+      Camera</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header hidden">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/icons/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>Git</h3>
+
+  <label for="toc-control">
+    
+    <img src="/icons/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#installation">Installation</a>
+      <ul>
+        <li><a href="#os-x">OS X</a></li>
+        <li><a href="#linux">Linux</a></li>
+        <li><a href="#windows">Windows</a></li>
+        <li><a href="#git-version">Git version</a></li>
+      </ul>
+    </li>
+    <li><a href="#accessing-mit-git">Accessing MIT Git</a>
+      <ul>
+        <li><a href="#setting-up-ssh-on-your-personal-computer">Setting up SSH on your personal computer</a></li>
+        <li><a href="#setting-up-ssh-on-the-pi">Setting up SSH on the Pi</a></li>
+      </ul>
+    </li>
+    <li><a href="#using-git">Using Git</a>
+      <ul>
+        <li><a href="#configure-user">Configure user</a></li>
+        <li><a href="#tutorials">Tutorials</a></li>
+      </ul>
+    </li>
+    <li><a href="#whats-next">What&rsquo;s next</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h1 id="git-how-to">Git how-to<a class="anchor" href="#git-how-to">#</a></h1>
+<p><a href="https://en.wikipedia.org/wiki/Git">Git</a> is a software version control system to keep track of changes to your software development project. Git allows you to make and keep track of small updates (&ldquo;commits&rdquo;) as you develop your software. These commits <em>should</em> be safe checkpoints with descriptions of what changed such that you can revert to if your latest changes immobilize or destroy your robot. As such, they are also a great way to document your progress. Git also allows you to prototype with a separate copy of the software without affecting the main copy (&ldquo;branch&rdquo; out). Therefore, it is also a great tool to collaborate with others as you can have separate copies of the software and develop independently.</p>
+<h2 id="installation">Installation<a class="anchor" href="#installation">#</a></h2>
+<p>Git is already installed on the Pi. You should also install Git on your own computer to write software on your computer without the Pi.</p>
+<h3 id="os-x">OS X<a class="anchor" href="#os-x">#</a></h3>
+<p>OS X should have Git installed by default.</p>
+<h3 id="linux">Linux<a class="anchor" href="#linux">#</a></h3>
+<p>Linux should also have Git installed by default. If not, checkout <a href="https://git-scm.com/install/linux">https://git-scm.com/install/linux</a> and install with your appropriate distro.</p>
+<h3 id="windows">Windows<a class="anchor" href="#windows">#</a></h3>
+<p>For Windows, download and run the &ldquo;Standalone Installer&rdquo; from <a href="https://git-scm.com/install/windows">https://git-scm.com/install/windows</a>.</p>
+<h3 id="git-version">Git version<a class="anchor" href="#git-version">#</a></h3>
+<p>Try this command to print out the version of Git on your system.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>git -v</span></span></code></pre></div><h2 id="accessing-mit-git">Accessing MIT Git<a class="anchor" href="#accessing-mit-git">#</a></h2>
+<p>MIT hosts a Git server accessible to all MIT students at <a href="https://github.mit.edu">https://github.mit.edu</a>. Your team software should also be hosted at <a href="https://github.mit.edu/maslab-2026">https://github.mit.edu/maslab-2026</a>. Check that you are able to access your team&rsquo;s software repository there. If not, please contact a course staff to get access permission.</p>
+<h3 id="setting-up-ssh-on-your-personal-computer">Setting up SSH on your personal computer<a class="anchor" href="#setting-up-ssh-on-your-personal-computer">#</a></h3>
+<p>Git also uses SSH to connect to Git servers. Follow <a href="https://docs.github.com/en/enterprise-server@3.4/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account">this guide</a> to set up and connect an SSH to your MIT GitHub account. You DO NOT have to do things with GitHub CLI (commands starting with <code>gh</code>).</p>
+<blockquote class='book-hint important'>
+<p>Make sure to add that at <a href="https://github.mit.edu">https://github.mit.edu</a>, where you have to sign in with your Kerberos, <strong>NOT</strong> the public <a href="https://github.com">https://github.com</a>.</p></blockquote><h3 id="setting-up-ssh-on-the-pi">Setting up SSH on the Pi<a class="anchor" href="#setting-up-ssh-on-the-pi">#</a></h3>
+<p>In order to get read/write access to your repository from the Pi, you can add a repository-specific &ldquo;Deploy Key.&rdquo; This lets you access a repository from the device without having to add a key for your Pi on any individual team member&rsquo;s account.</p>
+<p>To add a deploy key to your Pi, follow the steps in &ldquo;Set up deploy keys&rdquo; in <a href="https://docs.github.com/en/enterprise-server@3.4/authentication/connecting-to-github-with-ssh/managing-deploy-keys#set-up-deploy-keys">this guide</a>. In these instructions, &ldquo;server&rdquo; refers to the Pi. Your team repository should have been created for you, and can be found at <code>github.mit.edu/maslab-2026/team-&lt;number&gt;</code>.</p>
+<h2 id="using-git">Using Git<a class="anchor" href="#using-git">#</a></h2>
+<h3 id="configure-user">Configure user<a class="anchor" href="#configure-user">#</a></h3>
+<p>To <del>blame</del> know who make code changes, Git needs to be configured with a default name and email address to be linked to each commit. To do that, run these command on your computer and replace <code>&lt;your name&gt;</code> and <code>&lt;your email&gt;</code> appropriately:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>git config --global user.name <span style="color:#e6db74">&#34;&lt;your name&gt;&#34;</span>
+</span></span><span style="display:flex;"><span>git config --global user.email <span style="color:#e6db74">&#34;&lt;your email&gt;&#34;</span></span></span></code></pre></div><p>As for the Pi, feel free to use <code>teamX</code> and <code>teamX@teamXpi</code> for name and email, replacing <code>X</code> with your team number.</p>
+<h3 id="tutorials">Tutorials<a class="anchor" href="#tutorials">#</a></h3>
+<p>Now that you have Git installed and set up, you can follow these tutorials to try using Git on your own computer.</p>
+<ol>
+<li>Easy way: <a href="https://learngitbranching.js.org/">https://learngitbranching.js.org/</a>. Do &ldquo;Main -&gt; Introduction Sequence&rdquo; and &ldquo;Remote -&gt; Push &amp; Pull &ndash; Git Remotes!&rdquo;</li>
+<li>h4rdc0r3 way: <a href="https://missing.csail.mit.edu/2020/version-control/">https://missing.csail.mit.edu/2020/version-control/</a>.</li>
+<li>Git in VSCode: <a href="https://code.visualstudio.com/docs/sourcecontrol/quickstart">https://code.visualstudio.com/docs/sourcecontrol/quickstart</a>. For this tutorial, you can clone your team repository at <code>github.mit.edu/maslab-2026/team-&lt;number&gt;</code>. In addition, follow up with <a href="https://code.visualstudio.com/docs/sourcecontrol/branches-worktrees#_working-with-branches">branches</a> and <a href="https://code.visualstudio.com/docs/sourcecontrol/merge-conflicts">resolve merge conflicts</a>.</li>
+</ol>
+<h2 id="whats-next">What&rsquo;s next<a class="anchor" href="#whats-next">#</a></h2>
+<p>Now that Git is set up on your computer and the Pi, make sure your teammates who would want to develop the robot software also has it set up. Then, clone your team&rsquo;s repository to your computer and the Pi and start developing!</p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+<div>
+
+</div>
+
+<div>
+
+</div>
+
+</div>
+
+
+
+
+
+  
+  
+  
+  <div class="flex flex-wrap justify-between">
+    <span>
+    
+      <a href="/docs/raspberry-pi/" class="flex align-center">
+        <img src="/icons/backward.svg" class="book-icon" alt="Backward" />
+        <span>Raspberry Pi</span>
+      </a>
+    
+    </span>
+    <span>
+    
+      <a href="/docs/software/" class="flex align-center">
+        <span>Software</span>
+        <img src="/icons/forward.svg" class="book-icon" alt="Forward" />
+      </a>
+    
+    </span>
+  </div>
+  
+
+
+ 
+        
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+        
+        
+  
+ 
+        
+  
+  
+    <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
+  
+
+      </footer>
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+  
+  <aside class="book-toc">
+    <div class="book-toc-content">
+      
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#installation">Installation</a>
+      <ul>
+        <li><a href="#os-x">OS X</a></li>
+        <li><a href="#linux">Linux</a></li>
+        <li><a href="#windows">Windows</a></li>
+        <li><a href="#git-version">Git version</a></li>
+      </ul>
+    </li>
+    <li><a href="#accessing-mit-git">Accessing MIT Git</a>
+      <ul>
+        <li><a href="#setting-up-ssh-on-your-personal-computer">Setting up SSH on your personal computer</a></li>
+        <li><a href="#setting-up-ssh-on-the-pi">Setting up SSH on the Pi</a></li>
+      </ul>
+    </li>
+    <li><a href="#using-git">Using Git</a>
+      <ul>
+        <li><a href="#configure-user">Configure user</a></li>
+        <li><a href="#tutorials">Tutorials</a></li>
+      </ul>
+    </li>
+    <li><a href="#whats-next">What&rsquo;s next</a></li>
+  </ul>
+</nav>
+
+
+
+    </div>
+  </aside>
+  
+ 
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

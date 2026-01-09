@@ -2,6 +2,10 @@
 title: "Raspberry Pi"
 date: 2026-01-08T14:04:32-05:00
 weight: 3
+keywords:
+- wifi
+- raspberry pi
+- ssh
 # bookComments: false
 # bookSearchExclude: false
 # bookPostThumbnail: thumbnail.*
@@ -61,7 +65,7 @@ OpenSSH_for_Windows_9.5p1, LibreSSL 3.8.2
 
 To connect to your Pi using SSH, you need to first be connected to its broadcasted wireless network. Open a shell, or SSH-client / application and enter the following command, where X is your team number:
 
-```
+```shell
 ssh teamX@teamXpi.local
 ```
 

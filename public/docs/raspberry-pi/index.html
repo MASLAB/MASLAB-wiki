@@ -34,6 +34,7 @@ Along with the Pi you should have received a microSD card in a microSD card case
   <meta itemprop="datePublished" content="2026-01-08T14:04:32-05:00">
   <meta itemprop="dateModified" content="2026-01-08T14:04:32-05:00">
   <meta itemprop="wordCount" content="1153">
+  <meta itemprop="keywords" content="wifi,raspberry pi,ssh">
 
 <title>Raspberry Pi | MASLAB wiki</title>
 <link rel="icon" href="/favicon.png" >
@@ -98,6 +99,20 @@ Along with the Pi you should have received a microSD card in a microSD card case
   
     <a href="/docs/introduction/" class="">
       Introduction</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/ssh/" class="">
+      SSH</a>
   
 
         </li>
@@ -284,7 +299,7 @@ Along with the Pi you should have received a microSD card in a microSD card case
 u
 To connect to the Pi, we use <a href="https://en.wikipedia.org/wiki/Secure_Shell">Secure Shell (SSH)</a>. SSH is an extremely powerful tool for remotely accessing another computer&rsquo;s shell. This class involves a significant amount of coding, and being able to do so in the absence of a desktop environment is a very valuable skill. SSH allows multiple agents to remotely attach the same machine, at the same time. Most modern operating systems like OS X, Ubuntu, and Windows come with SSH preinstalled. Double check by running <code>ssh -V</code> in a shell. If SSH is installed, you should get something similar to this:</p></blockquote><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>PS C:<span style="color:#ae81ff">\U</span>sers<span style="color:#ae81ff">\M</span>ASLAB&gt; ssh -V
 </span></span><span style="display:flex;"><span>OpenSSH_for_Windows_9.5p1, LibreSSL 3.8.2</span></span></code></pre></div><p>To connect to your Pi using SSH, you need to first be connected to its broadcasted wireless network. Open a shell, or SSH-client / application and enter the following command, where X is your team number:</p>
-<pre tabindex="0"><code>ssh teamX@teamXpi.local</code></pre><p>The format of this is as follows: <code>ssh user@hostname</code>; where the <code>user</code> is your team name, and the <code>hostname</code> is your your team name with the <code>pi.local</code> suffix appended. You should keep note of your device&rsquo;s hostname.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>ssh teamX@teamXpi.local</span></span></code></pre></div><p>The format of this is as follows: <code>ssh user@hostname</code>; where the <code>user</code> is your team name, and the <code>hostname</code> is your your team name with the <code>pi.local</code> suffix appended. You should keep note of your device&rsquo;s hostname.</p>
 <p>You should be shown a field resembling the following and prompted for a password. Ask a staff for the password.</p>
 <pre tabindex="0"><code>teamX@teamXpi.local&#39;s password: </code></pre><p>There are a variety of tools to make your life easier while working in a shell. Some of the staff&rsquo;s personal favorites are <a href="https://www.vim.org/">vim</a> or <a href="https://neovim.io/">neovim</a> in tandem with <a href="https://github.com/tmux/tmux/wiki">tmux</a>. Becoming proficient with these tools can, in many ways, be much more powerful than a traditional desktop IDE.</p>
 <h4 id="shell-tool-resources">Shell Tool Resources<a class="anchor" href="#shell-tool-resources">#</a></h4>

@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="SSH / MOSH# Secure Shell, abbreviated as SSH is an incredibly powerful tool for remotely accessing a networked device. In this class, we will primary use SSH, or its mobile-alternative MOSH, to interface with the Raspberry Pi.
+Before interfacing with the Raspberry Pi, there are a few steps to setup its connectivity.
+Hopping on the same LAN# In order to communicate with your Raspberry Pi, we need to connect to the same Local Area Network or LAN, for short.
+">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://192.168.0.217:1313/docs/ssh/">
+  <meta property="og:site_name" content="MASLAB wiki">
+  <meta property="og:title" content="SSH">
+  <meta property="og:description" content="SSH / MOSH# Secure Shell, abbreviated as SSH is an incredibly powerful tool for remotely accessing a networked device. In this class, we will primary use SSH, or its mobile-alternative MOSH, to interface with the Raspberry Pi.
+Before interfacing with the Raspberry Pi, there are a few steps to setup its connectivity.
+Hopping on the same LAN# In order to communicate with your Raspberry Pi, we need to connect to the same Local Area Network or LAN, for short.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="docs">
+
+
+  <meta itemprop="name" content="SSH">
+  <meta itemprop="description" content="SSH / MOSH# Secure Shell, abbreviated as SSH is an incredibly powerful tool for remotely accessing a networked device. In this class, we will primary use SSH, or its mobile-alternative MOSH, to interface with the Raspberry Pi.
+Before interfacing with the Raspberry Pi, there are a few steps to setup its connectivity.
+Hopping on the same LAN# In order to communicate with your Raspberry Pi, we need to connect to the same Local Area Network or LAN, for short.">
+  <meta itemprop="wordCount" content="379">
+  <meta itemprop="keywords" content="SSH,Mosh">
+
+<title>SSH | MASLAB wiki</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="http://192.168.0.217:1313/docs/ssh/">
+<link rel="stylesheet" href="/book.min.cc2c524ed250aac81b23d1f4af87344917b325208841feca0968fe450f570575.css" integrity="sha256-zCxSTtJQqsgbI9H0r4c0SRezJSCIQf7KCWj&#43;RQ9XBXU=" crossorigin="anonymous">
+
+
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.dca74a6d40e9aaf67eb0de558ffb9d0b3406468c0cbc51a98779b9bf133bdbcf.js" integrity="sha256-3KdKbUDpqvZ&#43;sN5Vj/udCzQGRowMvFGph3m5vxM7288=" crossorigin="anonymous"></script>
+
+
+
+  
+</head>
+<body dir="ltr" class="book-kind-page book-type-docs">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>MASLAB wiki</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input id="book-search-input" type="text" 
+    placeholder="Search"
+    aria-label="Search"
+    maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/introduction/" class="">
+      Introduction</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/ssh/" class="active">
+      SSH</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/electrical/" class="">
+      Electrical</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/raspberry-pi/" class="">
+      Raspberry Pi</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/git/" class="">
+      Git</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/software/" class="">
+      Software</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/battery/" class="">
+      Battery</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/camera/" class="">
+      Camera</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header hidden">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/icons/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>SSH</h3>
+
+  <label for="toc-control">
+    
+    <img src="/icons/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#hopping-on-the-same-lan">Hopping on the same LAN</a></li>
+    <li><a href="#interfacing-with-the-raspberry-pi">Interfacing with the Raspberry Pi</a></li>
+    <li><a href="#connecting-the-raspberry-pi-to-mit-wifi">Connecting the Raspberry Pi to MIT WiFi</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h1 id="ssh--mosh">SSH / MOSH<a class="anchor" href="#ssh--mosh">#</a></h1>
+<p>Secure Shell, abbreviated as <strong>SSH</strong> is an incredibly powerful tool for remotely accessing a networked device. In this class, we will primary use SSH, or its mobile-alternative <strong>MOSH</strong>, to interface with the Raspberry Pi.</p>
+<p>Before interfacing with the Raspberry Pi, there are a few steps to setup its connectivity.</p>
+<h2 id="hopping-on-the-same-lan">Hopping on the same LAN<a class="anchor" href="#hopping-on-the-same-lan">#</a></h2>
+<p>In order to communicate with your Raspberry Pi, we need to connect to the same Local Area Network or <strong>LAN</strong>, for short.</p>
+<p>Assuming your Raspberry Pi has completed it&rsquo;s initialization, it should now be broadcasting a wireless network labeled after your team name; e.g. <code>team11wifi</code>. The default password to this network is <code>balsam</code> &ndash; that is, &ldquo;maslab&rdquo; backwards.</p>
+<p>Connect to this network and now both you and your Raspberry Pi will be on the same <strong>LAN</strong>.</p>
+<blockquote class='book-hint warning'>
+<p>After connecting to your Pi&rsquo;s wireless network, you will not have access to the &ldquo;internet&rdquo; until later on in this guide.</p></blockquote><h2 id="interfacing-with-the-raspberry-pi">Interfacing with the Raspberry Pi<a class="anchor" href="#interfacing-with-the-raspberry-pi">#</a></h2>
+<p>To access the Raspberry Pi, we utilize <strong>SSH</strong> or <strong>MOSH</strong>. First, make sure you have a valid ssh/mosh client installed on your device.</p>
+<div class="book-tabs">
+<input type="radio" class="toggle" name="tabs-0" id="tabs-0-0" checked="checked" /><label for="tabs-0-0">MacOS</label><div class="book-tabs-content markdown-inner">
+<p>Open up the &ldquo;Terminal&rdquo; application on your <strong>OSX</strong> device; this can found by searching for &ldquo;Terminal&rdquo; in the spotlight search or through the applications menu.</p>
+<p>Verify <strong>SSH</strong>/<strong>MOSH</strong> is installedby typing <code>ssh -V</code> into the application. If not installed, install <strong>SSH</strong> and <strong>MOSH</strong> by executing <code>brew install openssh mosh</code> in the Terminal application.</p>
+</div>
+<input type="radio" class="toggle" name="tabs-0" id="tabs-0-1"  /><label for="tabs-0-1">Windows</label><div class="book-tabs-content markdown-inner">
+<p>Either the windows &ldquo;Command Prompt&rdquo; or &ldquo;Powershell&rdquo; can be used for <strong>SSH</strong>/<strong>MOSH</strong>.</p>
+<p>Verify <strong>SSH</strong>/<strong>MOSH</strong> is installedby typing <code>ssh -V</code> into the application. If not installed, install <strong>SSH</strong> by executing <code>winget install Microsoft.OpenSSH</code>. Optionally, install <strong>MOSH</strong> by adding the <a href="https://chromewebstore.google.com/detail/mosh/ooiklbnjmhbcgemelgfhaeaocllobloj?pli=1">chrome extension</a>.</p>
+</div>
+<input type="radio" class="toggle" name="tabs-0" id="tabs-0-2"  /><label for="tabs-0-2">Linux</label><div class="book-tabs-content markdown-inner">
+<p>Verify SSH/MOSH is installed by typing <code>ssh -V</code> into the terminal. If not installed, install <strong>SSH</strong> and <strong>MOSH</strong> by executing <code>apt/apk/pacman instll openssh mosh</code> varying on your chosen linux distribution.</p>
+</div>
+<input type="radio" class="toggle" name="tabs-0" id="tabs-0-3"  /><label for="tabs-0-3">iOS/Android</label><div class="book-tabs-content markdown-inner">
+<p>Any number of <strong>SSH</strong>/<strong>MOSH</strong> clients can be installed through your devices application manager. On both <strong>iOS</strong> and <strong>Android</strong>, <a href="https://termius.com/index.html">Termius</a> is the recommended <strong>SSH</strong> application.</p>
+</div>
+</div>
+<p>Connect to the Raspberry Pi using either <strong>SSH</strong> or <strong>MOSH</strong> by executing <code>ssh &lt;user&gt;@&lt;hostname&gt;</code>, where the <code>&lt;user&gt;</code> is your assigned team name and number, and the <code>&lt;hostname&gt;</code> is your assigned team name and number with &ldquo;pi.local&rdquo; suffixed; i.e. <code>ssh team11@team11pi.local</code>.</p>
+<link rel="stylesheet" href="/asciinema/asciinema-player.css" /><script defer src="/asciinema/asciinema-player.min.js"></script><script defer src="/asciinema/asciinema-auto.js"></script><div class="asciinema book-asciinema"id="asciinema-1"x-data-cast="/casts/ssh3.cast"x-data-opts="{&#34;autoplay&#34;:true,&#34;cols&#34;:90,&#34;loop&#34;:true,&#34;rows&#34;:8,&#34;speed&#34;:2}"></div>
+
+<h2 id="connecting-the-raspberry-pi-to-mit-wifi">Connecting the Raspberry Pi to MIT WiFi<a class="anchor" href="#connecting-the-raspberry-pi-to-mit-wifi">#</a></h2>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+<div>
+
+</div>
+
+<div>
+
+</div>
+
+</div>
+
+
+
+
+
+  
+  
+  
+  <div class="flex flex-wrap justify-between">
+    <span>
+    
+      <a href="/docs/introduction/" class="flex align-center">
+        <img src="/icons/backward.svg" class="book-icon" alt="Backward" />
+        <span>Introduction</span>
+      </a>
+    
+    </span>
+    <span>
+    
+      <a href="/docs/electrical/" class="flex align-center">
+        <span>Electrical</span>
+        <img src="/icons/forward.svg" class="book-icon" alt="Forward" />
+      </a>
+    
+    </span>
+  </div>
+  
+
+
+ 
+        
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+        
+        
+  
+ 
+        
+  
+  
+    <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
+  
+
+      </footer>
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+  
+  <aside class="book-toc">
+    <div class="book-toc-content">
+      
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#hopping-on-the-same-lan">Hopping on the same LAN</a></li>
+    <li><a href="#interfacing-with-the-raspberry-pi">Interfacing with the Raspberry Pi</a></li>
+    <li><a href="#connecting-the-raspberry-pi-to-mit-wifi">Connecting the Raspberry Pi to MIT WiFi</a></li>
+  </ul>
+</nav>
+
+
+
+    </div>
+  </aside>
+  
+ 
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

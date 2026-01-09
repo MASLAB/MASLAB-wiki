@@ -16,6 +16,13 @@
       <description>&lt;h2 id=&#34;maslab-robot-kit&#34;&gt;MASLAB Robot Kit&lt;a class=&#34;anchor&#34; href=&#34;#maslab-robot-kit&#34;&gt;#&lt;/a&gt;&lt;/h2&gt;&#xA;&lt;p&gt;At the beginning of the class, each team will be provided a tote with parts, tools, and a small part organizer. There will also be other shared materials and components such as MDF boards and servos for your team to start building the robot. Each team can also request additional parts by filling out an online form. Please be mindful about shipping time and fee.&lt;/p&gt;&#xA;&lt;h3 id=&#34;hardwares&#34;&gt;Hardwares&lt;a class=&#34;anchor&#34; href=&#34;#hardwares&#34;&gt;#&lt;/a&gt;&lt;/h3&gt;&#xA;&lt;p&gt;MASLAB robot kit consists of two central components:&lt;/p&gt;</description>
     </item>
     <item>
+      <title>SSH</title>
+      <link>http://192.168.0.217:1313/docs/ssh/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://192.168.0.217:1313/docs/ssh/</guid>
+      <description>&lt;h1 id=&#34;ssh--mosh&#34;&gt;SSH / MOSH&lt;a class=&#34;anchor&#34; href=&#34;#ssh--mosh&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xA;&lt;p&gt;Secure Shell, abbreviated as &lt;strong&gt;SSH&lt;/strong&gt; is an incredibly powerful tool for remotely accessing a networked device. In this class, we will primary use SSH, or its mobile-alternative &lt;strong&gt;MOSH&lt;/strong&gt;, to interface with the Raspberry Pi.&lt;/p&gt;&#xA;&lt;p&gt;Before interfacing with the Raspberry Pi, there are a few steps to setup its connectivity.&lt;/p&gt;&#xA;&lt;h2 id=&#34;hopping-on-the-same-lan&#34;&gt;Hopping on the same LAN&lt;a class=&#34;anchor&#34; href=&#34;#hopping-on-the-same-lan&#34;&gt;#&lt;/a&gt;&lt;/h2&gt;&#xA;&lt;p&gt;In order to communicate with your Raspberry Pi, we need to connect to the same Local Area Network or &lt;strong&gt;LAN&lt;/strong&gt;, for short.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Electrical</title>
       <link>http://192.168.0.217:1313/docs/electrical/</link>
       <pubDate>Thu, 08 Jan 2026 14:04:32 -0500</pubDate>

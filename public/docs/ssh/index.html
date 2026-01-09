@@ -8,7 +8,7 @@ https://github.com/alex-shpak/hugo-book
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="SSH / MOSH# Secure Shell, abbreviated as SSH is an incredibly powerful tool for remotely accessing a networked device. In this class, we will primary use SSH, or its mobile-alternative MOSH, to interface with the Raspberry Pi.
+<meta name="description" content="SSH / MOSH# Secure Shell, abbreviated as SSH, is an incredibly powerful tool for remotely accessing a networked device. In this class, we will primary use SSH, or its mobile-alternative MOSH, to interface with the Raspberry Pi.
 Before interfacing with the Raspberry Pi, there are a few steps to setup its connectivity.
 Hopping on the same LAN# In order to communicate with your Raspberry Pi, we need to connect to the same Local Area Network or LAN, for short.
 ">
@@ -17,7 +17,7 @@ Hopping on the same LAN# In order to communicate with your Raspberry Pi, we need
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="http://192.168.0.217:1313/docs/ssh/">
   <meta property="og:site_name" content="MASLAB wiki">
   <meta property="og:title" content="SSH">
-  <meta property="og:description" content="SSH / MOSH# Secure Shell, abbreviated as SSH is an incredibly powerful tool for remotely accessing a networked device. In this class, we will primary use SSH, or its mobile-alternative MOSH, to interface with the Raspberry Pi.
+  <meta property="og:description" content="SSH / MOSH# Secure Shell, abbreviated as SSH, is an incredibly powerful tool for remotely accessing a networked device. In this class, we will primary use SSH, or its mobile-alternative MOSH, to interface with the Raspberry Pi.
 Before interfacing with the Raspberry Pi, there are a few steps to setup its connectivity.
 Hopping on the same LAN# In order to communicate with your Raspberry Pi, we need to connect to the same Local Area Network or LAN, for short.">
   <meta property="og:locale" content="en_us">
@@ -26,10 +26,10 @@ Hopping on the same LAN# In order to communicate with your Raspberry Pi, we need
 
 
   <meta itemprop="name" content="SSH">
-  <meta itemprop="description" content="SSH / MOSH# Secure Shell, abbreviated as SSH is an incredibly powerful tool for remotely accessing a networked device. In this class, we will primary use SSH, or its mobile-alternative MOSH, to interface with the Raspberry Pi.
+  <meta itemprop="description" content="SSH / MOSH# Secure Shell, abbreviated as SSH, is an incredibly powerful tool for remotely accessing a networked device. In this class, we will primary use SSH, or its mobile-alternative MOSH, to interface with the Raspberry Pi.
 Before interfacing with the Raspberry Pi, there are a few steps to setup its connectivity.
 Hopping on the same LAN# In order to communicate with your Raspberry Pi, we need to connect to the same Local Area Network or LAN, for short.">
-  <meta itemprop="wordCount" content="379">
+  <meta itemprop="wordCount" content="419">
   <meta itemprop="keywords" content="SSH,Mosh">
 
 <title>SSH | MASLAB wiki</title>
@@ -107,20 +107,6 @@ Hopping on the same LAN# In order to communicate with your Raspberry Pi, we need
   
 
   
-    <a href="/docs/ssh/" class="active">
-      SSH</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
     <a href="/docs/electrical/" class="">
       Electrical</a>
   
@@ -149,8 +135,8 @@ Hopping on the same LAN# In order to communicate with your Raspberry Pi, we need
   
 
   
-    <a href="/docs/git/" class="">
-      Git</a>
+    <a href="/docs/ssh/" class="active">
+      SSH</a>
   
 
         </li>
@@ -163,8 +149,22 @@ Hopping on the same LAN# In order to communicate with your Raspberry Pi, we need
   
 
   
-    <a href="/docs/software/" class="">
-      Software</a>
+    <a href="/docs/shell/" class="">
+      Using a Shell</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/git/" class="">
+      Git</a>
   
 
         </li>
@@ -193,6 +193,20 @@ Hopping on the same LAN# In order to communicate with your Raspberry Pi, we need
   
     <a href="/docs/camera/" class="">
       Camera</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/software/" class="">
+      Software</a>
   
 
         </li>
@@ -265,7 +279,7 @@ Hopping on the same LAN# In order to communicate with your Raspberry Pi, we need
       
       
   <article class="markdown book-article"><h1 id="ssh--mosh">SSH / MOSH<a class="anchor" href="#ssh--mosh">#</a></h1>
-<p>Secure Shell, abbreviated as <strong>SSH</strong> is an incredibly powerful tool for remotely accessing a networked device. In this class, we will primary use SSH, or its mobile-alternative <strong>MOSH</strong>, to interface with the Raspberry Pi.</p>
+<p>Secure Shell, abbreviated as <strong>SSH</strong>, is an incredibly powerful tool for remotely accessing a networked device. In this class, we will primary use SSH, or its mobile-alternative <strong>MOSH</strong>, to interface with the Raspberry Pi.</p>
 <p>Before interfacing with the Raspberry Pi, there are a few steps to setup its connectivity.</p>
 <h2 id="hopping-on-the-same-lan">Hopping on the same LAN<a class="anchor" href="#hopping-on-the-same-lan">#</a></h2>
 <p>In order to communicate with your Raspberry Pi, we need to connect to the same Local Area Network or <strong>LAN</strong>, for short.</p>
@@ -284,17 +298,22 @@ Hopping on the same LAN# In order to communicate with your Raspberry Pi, we need
 <p>Verify <strong>SSH</strong>/<strong>MOSH</strong> is installedby typing <code>ssh -V</code> into the application. If not installed, install <strong>SSH</strong> by executing <code>winget install Microsoft.OpenSSH</code>. Optionally, install <strong>MOSH</strong> by adding the <a href="https://chromewebstore.google.com/detail/mosh/ooiklbnjmhbcgemelgfhaeaocllobloj?pli=1">chrome extension</a>.</p>
 </div>
 <input type="radio" class="toggle" name="tabs-0" id="tabs-0-2"  /><label for="tabs-0-2">Linux</label><div class="book-tabs-content markdown-inner">
-<p>Verify SSH/MOSH is installed by typing <code>ssh -V</code> into the terminal. If not installed, install <strong>SSH</strong> and <strong>MOSH</strong> by executing <code>apt/apk/pacman instll openssh mosh</code> varying on your chosen linux distribution.</p>
+<p>Verify SSH/MOSH is installed by typing <code>ssh -V</code> into the terminal. If not installed, install <strong>SSH</strong> and <strong>MOSH</strong> by executing <code>apt/apk/pacman install openssh mosh</code> varying on your chosen linux distribution.</p>
 </div>
 <input type="radio" class="toggle" name="tabs-0" id="tabs-0-3"  /><label for="tabs-0-3">iOS/Android</label><div class="book-tabs-content markdown-inner">
 <p>Any number of <strong>SSH</strong>/<strong>MOSH</strong> clients can be installed through your devices application manager. On both <strong>iOS</strong> and <strong>Android</strong>, <a href="https://termius.com/index.html">Termius</a> is the recommended <strong>SSH</strong> application.</p>
 </div>
 </div>
 <p>Connect to the Raspberry Pi using either <strong>SSH</strong> or <strong>MOSH</strong> by executing <code>ssh &lt;user&gt;@&lt;hostname&gt;</code>, where the <code>&lt;user&gt;</code> is your assigned team name and number, and the <code>&lt;hostname&gt;</code> is your assigned team name and number with &ldquo;pi.local&rdquo; suffixed; i.e. <code>ssh team11@team11pi.local</code>.</p>
-<link rel="stylesheet" href="/asciinema/asciinema-player.css" /><script defer src="/asciinema/asciinema-player.min.js"></script><script defer src="/asciinema/asciinema-auto.js"></script><div class="asciinema book-asciinema"id="asciinema-1"x-data-cast="/casts/ssh3.cast"x-data-opts="{&#34;autoplay&#34;:true,&#34;cols&#34;:90,&#34;loop&#34;:true,&#34;rows&#34;:8,&#34;speed&#34;:2}"></div>
+<link rel="stylesheet" href="/asciinema/asciinema-player.css" /><script defer src="/asciinema/asciinema-player.min.js"></script><script defer src="/asciinema/asciinema-auto.js"></script><div class="asciinema book-asciinema"id="asciinema-1"x-data-cast="/casts/ssh.cast"x-data-opts="{&#34;autoplay&#34;:true,&#34;cols&#34;:90,&#34;loop&#34;:true,&#34;rows&#34;:8,&#34;speed&#34;:2}"></div>
 
 <h2 id="connecting-the-raspberry-pi-to-mit-wifi">Connecting the Raspberry Pi to MIT WiFi<a class="anchor" href="#connecting-the-raspberry-pi-to-mit-wifi">#</a></h2>
-</article>
+<pre tabindex="0"><code>nmcli connection add type wifi con-name &#34;MIT SECURE&#34; ifname wlan0 ssid &#34;MIT SECURE&#34; \
+    wifi-sec.key-mgmt wpa-eap \
+    802-1x.eap peap \
+    802-1x.phase2-auth mschapv2 \
+    802-1x.identity &#34;your_username&#34; \
+    802-1x.password &#34;your_password&#34;</code></pre><pre tabindex="0"><code>sudo nmcli device wifi hotspot ssid &lt;hotspot name&gt; password &lt;hotspot password&gt; ifname wlan0</code></pre></article>
  
       
 
@@ -322,16 +341,16 @@ Hopping on the same LAN# In order to communicate with your Raspberry Pi, we need
   <div class="flex flex-wrap justify-between">
     <span>
     
-      <a href="/docs/introduction/" class="flex align-center">
+      <a href="/docs/raspberry-pi/" class="flex align-center">
         <img src="/icons/backward.svg" class="book-icon" alt="Backward" />
-        <span>Introduction</span>
+        <span>Raspberry Pi</span>
       </a>
     
     </span>
     <span>
     
-      <a href="/docs/electrical/" class="flex align-center">
-        <span>Electrical</span>
+      <a href="/docs/shell/" class="flex align-center">
+        <span>Using a Shell</span>
         <img src="/icons/forward.svg" class="book-icon" alt="Forward" />
       </a>
     

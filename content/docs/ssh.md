@@ -1,6 +1,6 @@
 ---
 title: "SSH"
-weight: 1
+weight: 4
 keywords:
 - SSH
 - Mosh
@@ -17,7 +17,7 @@ keywords:
 
 # SSH / MOSH
 
-Secure Shell, abbreviated as **SSH** is an incredibly powerful tool for remotely accessing a networked device. In this class, we will primary use SSH, or its mobile-alternative **MOSH**, to interface with the Raspberry Pi.
+Secure Shell, abbreviated as **SSH**, is an incredibly powerful tool for remotely accessing a networked device. In this class, we will primary use SSH, or its mobile-alternative **MOSH**, to interface with the Raspberry Pi.
 
 Before interfacing with the Raspberry Pi, there are a few steps to setup its connectivity.
 
@@ -44,7 +44,7 @@ Verify **SSH**/**MOSH** is installedby typing `ssh -V` into the application. If 
 
 Verify **SSH**/**MOSH** is installedby typing `ssh -V` into the application. If not installed, install **SSH** by executing `winget install Microsoft.OpenSSH`. Optionally, install **MOSH** by adding the [chrome extension](https://chromewebstore.google.com/detail/mosh/ooiklbnjmhbcgemelgfhaeaocllobloj?pli=1). {{% /tab %}}
 {{% tab "Linux" %}}
-Verify SSH/MOSH is installed by typing `ssh -V` into the terminal. If not installed, install **SSH** and **MOSH** by executing `apt/apk/pacman instll openssh mosh` varying on your chosen linux distribution.
+Verify SSH/MOSH is installed by typing `ssh -V` into the terminal. If not installed, install **SSH** and **MOSH** by executing `apt/apk/pacman install openssh mosh` varying on your chosen linux distribution.
 {{% /tab %}}
 {{% tab "iOS/Android" %}}
 Any number of **SSH**/**MOSH** clients can be installed through your devices application manager. On both **iOS** and **Android**, [Termius](https://termius.com/index.html) is the recommended **SSH** application.
@@ -54,7 +54,7 @@ Any number of **SSH**/**MOSH** clients can be installed through your devices app
 Connect to the Raspberry Pi using either **SSH** or **MOSH** by executing `ssh <user>@<hostname>`, where the `<user>` is your assigned team name and number, and the `<hostname>` is your assigned team name and number with "pi.local" suffixed; i.e. `ssh team11@team11pi.local`.
 
 {{< asciinema
-    cast="/casts/ssh3.cast"
+    cast="/casts/ssh.cast"
     loop=true
     autoplay=true
     cols=90
@@ -62,3 +62,16 @@ Connect to the Raspberry Pi using either **SSH** or **MOSH** by executing `ssh <
     speed=2 >}}
 
 ## Connecting the Raspberry Pi to MIT WiFi
+
+```
+nmcli connection add type wifi con-name "MIT SECURE" ifname wlan0 ssid "MIT SECURE" \
+    wifi-sec.key-mgmt wpa-eap \
+    802-1x.eap peap \
+    802-1x.phase2-auth mschapv2 \
+    802-1x.identity "your_username" \
+    802-1x.password "your_password"
+```
+
+```
+sudo nmcli device wifi hotspot ssid <hotspot name> password <hotspot password> ifname wlan0
+```

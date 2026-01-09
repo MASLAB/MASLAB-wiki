@@ -2,35 +2,35 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://192.168.0.217:1313/docs/introduction/</loc>
+    <loc>https://example.org/docs/introduction/</loc>
     <lastmod>2026-01-08T13:43:37-05:00</lastmod>
   </url><url>
-    <loc>http://192.168.0.217:1313/docs/electrical/</loc>
+    <loc>https://example.org/docs/electrical/</loc>
     <lastmod>2026-01-08T14:04:32-05:00</lastmod>
   </url><url>
-    <loc>http://192.168.0.217:1313/</loc>
+    <loc>https://example.org/</loc>
     <lastmod>2026-01-08T14:04:32-05:00</lastmod>
   </url><url>
-    <loc>http://192.168.0.217:1313/docs/raspberry-pi/</loc>
+    <loc>https://example.org/docs/raspberry-pi/</loc>
     <lastmod>2026-01-08T14:04:32-05:00</lastmod>
   </url><url>
-    <loc>http://192.168.0.217:1313/docs/ssh/</loc>
+    <loc>https://example.org/docs/ssh/</loc>
   </url><url>
-    <loc>http://192.168.0.217:1313/docs/shell/</loc>
+    <loc>https://example.org/docs/shell/</loc>
   </url><url>
-    <loc>http://192.168.0.217:1313/docs/git/</loc>
+    <loc>https://example.org/docs/git/</loc>
   </url><url>
-    <loc>http://192.168.0.217:1313/docs/battery/</loc>
+    <loc>https://example.org/docs/battery/</loc>
   </url><url>
-    <loc>http://192.168.0.217:1313/docs/camera/</loc>
+    <loc>https://example.org/docs/camera/</loc>
   </url><url>
-    <loc>http://192.168.0.217:1313/docs/software/</loc>
+    <loc>https://example.org/docs/software/</loc>
   </url><url>
-    <loc>http://192.168.0.217:1313/docs/</loc>
+    <loc>https://example.org/docs/</loc>
     <lastmod>2026-01-08T14:04:32-05:00</lastmod>
   </url><url>
-    <loc>http://192.168.0.217:1313/categories/</loc>
+    <loc>https://example.org/categories/</loc>
   </url><url>
-    <loc>http://192.168.0.217:1313/tags/</loc>
+    <loc>https://example.org/tags/</loc>
   </url>
 </urlset>

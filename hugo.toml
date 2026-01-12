@@ -3,3 +3,9 @@ realtiveURLs = 'false'
 languageCode = 'en-us'
 title = 'MASLAB wiki'
 theme = 'hugo-book'
+
+[markup.goldmark.renderHooks.image]
+enableDefault = true
+[markup.goldmark.renderHooks.link]
+enableDefault = true
+

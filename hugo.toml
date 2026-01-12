@@ -1,4 +1,5 @@
 baseURL = 'https://maslab.mit.edu'
+realtiveURLs = 'false'
 languageCode = 'en-us'
 title = 'MASLAB wiki'
 theme = 'hugo-book'

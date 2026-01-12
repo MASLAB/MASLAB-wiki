@@ -5,6 +5,7 @@ weight: 2
 # bookComments: false
 # bookSearchExclude: false
 # bookPostThumbnail: thumbnail.*
+draft: false
 ---
 
 # Welcome to MASLAB

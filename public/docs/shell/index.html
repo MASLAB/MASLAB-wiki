@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr">
-<head>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -8,15 +8,15 @@ https://github.com/alex-shpak/hugo-book
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Shell# The shell is a robust communication interface between you and your operating system. This section is concerned with the basics of navigating and manipulating the file-tree accessible via the Bourne Again Shell - BA$H.
+<meta name="description" content="Terminal / Shell# The shell is a robust communication interface between you and your operating system. This section is concerned with the basics of navigating and manipulating the file-tree accessible via the Bourne Again Shell - BA$H.
 Navigation in the Shell# The prompt is the textual input into the shell. This is where you’ll execute commands and view their output, usually designated by the $. The text to the left of the prompt contains details about your session such as user, hostname, and current working directory or path; i.e. user@hostname ~/current/working/directory $ _.
 ">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
-<meta name="color-scheme" content="light dark"><meta property="og:url" content="https://example.org/docs/shell/">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://192.168.0.217:1313/docs/shell/">
   <meta property="og:site_name" content="MASLAB wiki">
   <meta property="og:title" content="Using a Shell">
-  <meta property="og:description" content="Shell# The shell is a robust communication interface between you and your operating system. This section is concerned with the basics of navigating and manipulating the file-tree accessible via the Bourne Again Shell - BA$H.
+  <meta property="og:description" content="Terminal / Shell# The shell is a robust communication interface between you and your operating system. This section is concerned with the basics of navigating and manipulating the file-tree accessible via the Bourne Again Shell - BA$H.
 Navigation in the Shell# The prompt is the textual input into the shell. This is where you’ll execute commands and view their output, usually designated by the $. The text to the left of the prompt contains details about your session such as user, hostname, and current working directory or path; i.e. user@hostname ~/current/working/directory $ _.">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
@@ -24,19 +24,19 @@ Navigation in the Shell# The prompt is the textual input into the shell. This is
 
 
   <meta itemprop="name" content="Using a Shell">
-  <meta itemprop="description" content="Shell# The shell is a robust communication interface between you and your operating system. This section is concerned with the basics of navigating and manipulating the file-tree accessible via the Bourne Again Shell - BA$H.
+  <meta itemprop="description" content="Terminal / Shell# The shell is a robust communication interface between you and your operating system. This section is concerned with the basics of navigating and manipulating the file-tree accessible via the Bourne Again Shell - BA$H.
 Navigation in the Shell# The prompt is the textual input into the shell. This is where you’ll execute commands and view their output, usually designated by the $. The text to the left of the prompt contains details about your session such as user, hostname, and current working directory or path; i.e. user@hostname ~/current/working/directory $ _.">
-  <meta itemprop="wordCount" content="251">
+  <meta itemprop="wordCount" content="653">
 
 <title>Using a Shell | MASLAB wiki</title>
 <link rel="icon" href="/favicon.png" >
 <link rel="manifest" href="/manifest.json">
-<link rel="canonical" href="https://example.org/docs/shell/">
+<link rel="canonical" href="http://192.168.0.217:1313/docs/shell/">
 <link rel="stylesheet" href="/book.min.cc2c524ed250aac81b23d1f4af87344917b325208841feca0968fe450f570575.css" integrity="sha256-zCxSTtJQqsgbI9H0r4c0SRezJSCIQf7KCWj&#43;RQ9XBXU=" crossorigin="anonymous">
 
 
   <script defer src="/fuse.min.js"></script>
-  <script defer src="/en.search.min.1e87a118efc07aece2fd56dc6a3496809e20203731d5f9587538c96c1016d1e0.js" integrity="sha256-HoehGO/Aeuzi/VbcajSWgJ4gIDcx1flYdTjJbBAW0eA=" crossorigin="anonymous"></script>
+  <script defer src="/en.search.min.64c50831993a675246a5252936bb13891600ca41cf3285537ac28bb4e4b8f830.js" integrity="sha256-ZMUIMZk6Z1JGpSUpNrsTiRYAykHPMoVTesKLtOS4&#43;DA=" crossorigin="anonymous"></script>
 
 
 
@@ -261,7 +261,11 @@ Navigation in the Shell# The prompt is the textual input into the shell. This is
   <ul>
     <li><a href="#navigation-in-the-shell">Navigation in the Shell</a></li>
     <li><a href="#manipulating-the-file-tree">Manipulating the File-Tree</a></li>
-    <li><a href="#editing-files-in-the-terminal">Editing Files in the Terminal</a></li>
+    <li><a href="#text-editors-in-the-shell">Text Editors in the Shell</a>
+      <ul>
+        <li><a href="#neovim">(neo)Vi(m)</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 
@@ -274,7 +278,7 @@ Navigation in the Shell# The prompt is the textual input into the shell. This is
 
       
       
-  <article class="markdown book-article"><h1 id="shell">Shell<a class="anchor" href="#shell">#</a></h1>
+  <article class="markdown book-article"><h1 id="terminal--shell">Terminal / Shell<a class="anchor" href="#terminal--shell">#</a></h1>
 <p>The <strong>shell</strong> is a robust communication interface between you and your operating system. This section is concerned with the basics of navigating and manipulating the file-tree accessible via the Bourne Again Shell - <strong>BA$H</strong>.</p>
 <h2 id="navigation-in-the-shell">Navigation in the Shell<a class="anchor" href="#navigation-in-the-shell">#</a></h2>
 <p>The prompt is the textual input into the shell. This is where you&rsquo;ll execute commands and view their output, usually designated by the <strong>$</strong>. The text to the left of the prompt contains details about your session such as user, hostname, and current working directory or path; i.e. <code>user@hostname ~/current/working/directory $ _</code>.</p>
@@ -306,7 +310,40 @@ Navigation in the Shell# The prompt is the textual input into the shell. This is
 <p>This can also be used to rename an existing file!</p>
 </div>
 </div>
-<h2 id="editing-files-in-the-terminal">Editing Files in the Terminal<a class="anchor" href="#editing-files-in-the-terminal">#</a></h2>
+<h2 id="text-editors-in-the-shell">Text Editors in the Shell<a class="anchor" href="#text-editors-in-the-shell">#</a></h2>
+<p>There are a number of terminal-based text editors, each with their own grade of learning curve. Proficiency with at least one of these is recommended. MASLAB recommends familiarizing yourself with either the <a href="https://www.vim.org">(neo)Vi(m)</a> or <a href="https://www.nano-editor.org">Nano</a> text editors.</p>
+<h3 id="neovim">(neo)Vi(m)<a class="anchor" href="#neovim">#</a></h3>
+<p><strong>Vi</strong> is an extremely powerful terminal-based text editor for the Unix operating system. <strong>Vim</strong> and <strong>Neovim</strong> are variants of the <strong>Vi</strong> editor packaged with a library of additional features.</p>
+<p>If not already installed, they can be added by the following in your shell.</p>
+<pre tabindex="0"><code>sudo apt install -y neovim vim vi </code></pre><blockquote class='book-hint warning'>
+<p>You should memorize/write-down the following information if unfamiliar with the <strong>(neo)Vi(m)</strong> editors.</p></blockquote><h4 id="modes">Modes<a class="anchor" href="#modes">#</a></h4>
+<p><strong>(neo)Vi(m)</strong> is interacted through a number of <em>modes</em>. The two you will familiarize yourself with most will be the <strong>i</strong>nsert and <strong>v</strong>isual modes. These modes are <strong>entered</strong> by pressing <code>i</code> or <code>v</code> for the <strong>i</strong>nsert and <strong>v</strong>isual modes, respectively. You can <strong>exit</strong> a mode at any time by pressing the <code>esc</code> key.</p>
+<p>In the insert mode, text can be written to or removed from the active buffer (the current window). The cursor can be moved through the use of the arrow keys.</p>
+<p>In the visual mode, text can be highlighted, copied, pasted, deleted, and more. The cursor is moved in the same manner as the insert mode, or through the use of the <code>hjkl</code> keys. To copy text, first highlight it and press the <code>y</code> key, then paste it by pressing <code>p</code>.</p>
+<h4 id="commands">Commands<a class="anchor" href="#commands">#</a></h4>
+<p>The <strong>(neo)Vi(m)</strong> command line is opened by pressed <code>:</code> on the keyboard. Here, you can enter a palette of commands, a few of which are listed below.</p>
+<div class="book-tabs">
+<input type="radio" class="toggle" name="tabs-2" id="tabs-2-0" checked="checked" /><label for="tabs-2-0">Writing Files</label><div class="book-tabs-content markdown-inner">
+<p>To write the buffer to a new file, use <code>:w file-name.txt</code>.</p>
+</div>
+<input type="radio" class="toggle" name="tabs-2" id="tabs-2-1"  /><label for="tabs-2-1">Leaving the Editor</label><div class="book-tabs-content markdown-inner">
+<p>To leave the editor, use <code>:q</code>. You can forcibly leave the editor by executing <code>:q!</code>.</p>
+</div>
+<input type="radio" class="toggle" name="tabs-2" id="tabs-2-2"  /><label for="tabs-2-2">Searching</label><div class="book-tabs-content markdown-inner">
+<p>A pattern can be searched for by executing <code>:/pattern</code>, where pattern is the desired term to be sought after.</p>
+</div>
+<input type="radio" class="toggle" name="tabs-2" id="tabs-2-3"  /><label for="tabs-2-3">Line Numbers</label><div class="book-tabs-content markdown-inner">
+<p>Line numbers can be shown by executing <code>:set number</code>. Among others, you can enable spellcheck by executing <code>set spell</code> .</p>
+</div>
+<input type="radio" class="toggle" name="tabs-2" id="tabs-2-4"  /><label for="tabs-2-4">Combining Commands</label><div class="book-tabs-content markdown-inner">
+<p>You can combine commands into a single statement by leading them on-top of one another. For example, to both save and quit <code>:wq</code>.</p>
+</div>
+</div>
+<h4 id="opening-the-editor">Opening the Editor<a class="anchor" href="#opening-the-editor">#</a></h4>
+<p>To use <strong>(neo)Vi(m)</strong>, execute the name of the editor to be used (<code>vi / vim / nvim</code>).</p>
+<div class="asciinema book-asciinema"id="asciinema-3"x-data-cast="/casts/vi.cast"x-data-opts="{&#34;autoplay&#34;:true,&#34;cols&#34;:90,&#34;loop&#34;:true,&#34;rows&#34;:21,&#34;speed&#34;:2}"></div>
+
+<p>To familiarize yourself, play around with the editor or head to <a href="https://openvim.com">OpenVim</a>, a great tool to practice your text-editing in <strong>(neo)Vi(m)</strong>.</p>
 </article>
  
       
@@ -386,7 +423,11 @@ Navigation in the Shell# The prompt is the textual input into the shell. This is
   <ul>
     <li><a href="#navigation-in-the-shell">Navigation in the Shell</a></li>
     <li><a href="#manipulating-the-file-tree">Manipulating the File-Tree</a></li>
-    <li><a href="#editing-files-in-the-terminal">Editing Files in the Terminal</a></li>
+    <li><a href="#text-editors-in-the-shell">Text Editors in the Shell</a>
+      <ul>
+        <li><a href="#neovim">(neo)Vi(m)</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 

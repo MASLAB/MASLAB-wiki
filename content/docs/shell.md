@@ -118,3 +118,5 @@ To use **(neo)Vi(m)**, execute the name of the editor to be used (`vi / vim / nv
     speed=2 >}}
 
 To familiarize yourself, play around with the editor or head to [OpenVim](https://openvim.com), a great tool to practice your text-editing in **(neo)Vi(m)**.
+
+

@@ -1,5 +1,5 @@
 ---
-title: "SSH"
+title: "SSH / MOSH"
 weight: 4
 keywords:
 - SSH

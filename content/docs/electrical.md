@@ -2,6 +2,7 @@
 title: "Electrical"
 date: 2026-01-08T14:04:32-05:00
 weight: 2
+draft: true
 # bookComments: false
 # bookSearchExclude: false
 # bookPostThumbnail: thumbnail.*

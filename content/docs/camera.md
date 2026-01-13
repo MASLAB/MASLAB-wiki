@@ -1,6 +1,7 @@
 ---
 title: "Camera"
 weight: 7
+draft: true
 # bookFlatSection: false
 # bookToc: true
 # bookHidden: false

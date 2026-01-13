@@ -11,7 +11,7 @@ keywords:
 # bookPostThumbnail: thumbnail.*
 ---
 
-# Raspberry Pi how-to
+# Raspberry Pi 
 The machine given to you by staff is called a Raspberry Pi. For the purposes of this class, your Raspberry Pi comes preinstalled with a slightly customized copy of [Raspberry Pi OS -- Trixie](https://www.raspberrypi.com/news/trixie-the-new-version-of-raspberry-pi-os/).
 
 ## Setting up the Pi

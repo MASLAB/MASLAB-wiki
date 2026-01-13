@@ -1,6 +1,7 @@
 ---
 title: "Git"
 weight: 6
+draft: true
 # bookFlatSection: false
 # bookToc: true
 # bookHidden: false

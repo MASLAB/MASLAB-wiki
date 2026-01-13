@@ -31,7 +31,7 @@ In the shell, the user navigates through a **tree-structure** of directories, wi
 └── ...
 ```
 
-To move through the tree structure, the commands you should familiarize yourself with first are `ls` and  `cd`.
+To move through the tree-structure, the commands you should familiarize yourself with first are `ls` and  `cd`.
 
 - **ls**: list files in directory
 - **cd**: change directory 
@@ -153,3 +153,60 @@ Nano can be opened by executing `nano` in your shell. Start typing to write into
     cols=90
     rows=21
     speed=2 >}}
+
+
+## Multiplexing
+
+**Terminal multiplexing** is an extremely powerful tool to split your terminal into multiple *pseudo*-terminal sessions. **[Tmux](https://github.com/tmux/tmux/wiki)** is the recommended terminal multiplexer for this class. **Tmux** offers persistence across local and remote sessions, allowing you to resume working after a log-out.
+
+First make sure **tmux** is installed by executing `tmux -V` in your shell. If not, install **tmux** by executing the following:
+
+```
+sudo apt install -y tmux
+```
+
+Starting a new **tmux** session is done by executing `tmux new` in your terminal, or `tmux new -s my-new-session` to specify a name.
+
+### Commands 
+
+You can **split** your terminal window into sub-sessions by pressing the default command leader (tmux prefix) control-B (`^B`), followed by either double-quotes to split the window **horizontally** (`"`), or the percent sign (`%`) to split the window **vertically**.
+
+> [!Tip]
+> The default command leader `^B` is used in tandem with a number of other key-combinations. You can change this by editing your **tmux** configuration file at `~/.config/tmux/tmux.conf`. For example, the following command will change the command leader to `^<Space>`.
+> ```
+> cat > ~/.config/tmux/tmux.conf << EOF
+> unbind-key C-b
+> set-option -g prefix C-Space
+> bind-key C-Space send-prefix
+> EOF
+> ```
+
+
+{{< tabs >}}
+{{% tab "Panes" %}}
+Tmux prefix + `"`. This splits your terminal **window** horizontally into two **panes**. Likewise, you can split your **window** vertically, by executing tmux prefix + `%`.
+
+You can then **kill** a **pane** by executing tmux prefix + `x`.
+
+You can **change** focus by using the tmux prefix in combination with the arrow keys. For example, executing tmux prefix + `↑` swaps focus to the **pane** above the current in focus.
+
+To make your life easier, you can enable **mouse support** swapping focus by executing tmux prefix + `:` to open the tmux **command line**, and then entering `set -g mouse on`. You can also add this to your tmux **config** to enable it across all sessions.
+{{% /tab %}}
+{{% tab "Windows" %}}
+Tmux prefix + `c`. As well as having multiple **panes**, you can also have multiple **windows** within a single tmux session. Tmux prefix + `<window number>`. For example, to change focus to **window** `2`, execute tmux prefix + `2`.
+{{% /tab %}}
+{{% tab "Attaching and Detaching" %}}
+Executing tmux prefix + `d` will detach you from the current tmux session. To reattach to the last session execute `tmux a` in your terminal.
+{{% /tab %}}
+{{< /tabs >}}
+
+## Becoming a Terminal Power-User
+
+When combined with a robust terminal-based text editor, **tmux** becomes an invaluable asset to any engineer working in the terminal. Oftentimes, the customizability offered by **tmux** and any of the **(neo)Vi(m)** lends to a more tailor-made experience than popular IDEs such as VSCode or Sublime Text. For this class the lightweight, persistent sessions across ssh log-ins/out are going to pay dividends in the long run.
+
+{{< asciinema
+    cast="/casts/tmux.cast"
+    loop=true
+    autoplay=true
+    speed=2 >}}
+

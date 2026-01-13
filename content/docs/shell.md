@@ -19,7 +19,19 @@ The **shell** is a robust communication interface between you and your operating
 
 The prompt is the textual input into the shell. This is where you'll execute commands and view their output, usually designated by the **$**. The text to the left of the prompt contains details about your session such as user, hostname, and current working directory or path; i.e. `user@hostname ~/current/working/directory $ _`. 
 
-The commands you should familiarize yourself with first are `ls` and  `cd`.
+In the shell, the user navigates through a **tree-structure** of directories, with the "root" directory as the lowest (bottom) member. You can navigate up and down this tree by executing commands in the shell. Below is an example of this tree structure.
+
+```
+/ <-- root 
+├── home/
+│   ├── staff/
+│   │   ├── my-cool-directory/
+│   │   └── my-cool-file.txt
+│   └── user42/
+└── ...
+```
+
+To move through the tree structure, the commands you should familiarize yourself with first are `ls` and  `cd`.
 
 - **ls**: list files in directory
 - **cd**: change directory 
@@ -31,6 +43,9 @@ The commands you should familiarize yourself with first are `ls` and  `cd`.
     cols=90
     rows=3
     speed=2 >}}
+
+> [!Tip]
+> The paths `./` and `../` exist in all non-root directories and refer to the **current** and **previous** directories, respectively. You can navigate to them like any other directory.
 
 To view a more comprehensive description of each of these commands, execute `man ls` or `man cd` to view the "man-page" for either. This goes for any of the following commands introduced as well.
 
@@ -119,4 +134,22 @@ To use **(neo)Vi(m)**, execute the name of the editor to be used (`vi / vim / nv
 
 To familiarize yourself, play around with the editor or head to [OpenVim](https://openvim.com), a great tool to practice your text-editing in **(neo)Vi(m)**.
 
+### Nano
 
+**[GNU Nano](https://www.nano-editor.org)** is a terminal-based text editor for Unix based systems. Nano comes preinstalled on most Linux operating systems, but can be installed manually by executing the following in your shell.
+
+```
+sudo apt install -y nano
+```
+
+Nano, much like (neo)Vi(m), has it's own learning curve. However, Nano tends to be more beginner friendly while lacking much of the customizability of the vim-like editors.
+
+Nano can be opened by executing `nano` in your shell. Start typing to write into the buffer, and press control-O (`^O`) to save. To exit the editor, press control-X (`^X`).
+
+{{< asciinema
+    cast="/casts/nano.cast"
+    loop=true
+    autoplay=true
+    cols=90
+    rows=21
+    speed=2 >}}

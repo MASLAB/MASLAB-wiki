@@ -60,13 +60,13 @@ Create a file with a given path: `touch /path/to/file.txt`.
 {{% tab "Create a Directory" %}}
 Create a directory/folder with a given path: `mkdir /path/to/folder/`.
 {{% /tab %}}
-{{% tab "Remove a File" %}}
-Remove a file with a given path: `rm /path/to/file`.
+{{% tab "Remove a File / Directory" %}}
+Remove a file with a given path: `rm /path/to/file`. To remove a directory, add the `-r` option to the command: `rm -r /path/to/folder`.
 {{% /tab %}}
-{{% tab "Copy a File" %}}
-Copy a file from one path to another: `cp /path/to/file /path/to/copy`.
+{{% tab "Copy a File / Directory" %}}
+Copy a file from one path to another: `cp /path/to/file /path/to/file-copy`. To copy a directory, add the `-r` option to the command: `cp /path/to/folder/ /path/to/folder-copy/`
 {{% /tab %}}
-{{% tab "Move a File" %}}
+{{% tab "Move a File / Directory" %}}
 Move a file from one path to another: `mv /path/to/file /path/to/new-file`. 
 
 This can also be used to rename an existing file!

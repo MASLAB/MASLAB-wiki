@@ -1,5 +1,5 @@
 ---
-title: "Using a Shell"
+title: "Terminal / Shell"
 weight: 5
 # bookFlatSection: false
 # bookToc: true

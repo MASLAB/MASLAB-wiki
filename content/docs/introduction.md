@@ -1,10 +1,9 @@
 ---
 title: "Introduction"
-date: 2026-01-08T13:43:37-05:00
+weight: 0
 # bookComments: false
 # bookSearchExclude: false
 # bookPostThumbnail: thumbnail.*
-weight: 1
 --- 
 
 ## MASLAB Robot Kit
@@ -26,7 +25,7 @@ Raven also includes 2 qwiic (https://www.sparkfun.com/qwiic) connector to connec
 
 To power these devices LiPo batteries will be provided.
 > [!CAUTION]
-> LiPo batteries are **DANGEROUS**. A tutorial about using LiPo battery will be provided during the first week of class. Do not use the battery until then. In addition, please review [battery guide](5-Battery) before using the robot with a battery. 
+> LiPo batteries are **DANGEROUS**. A tutorial about using LiPo battery will be provided during the first week of class. Do not use the battery until then. In addition, please review [battery guide](../battery) before using the robot with a battery. 
 
 ### Softwares
 The Raspberry Pi 5 is already set up with Raspberry Pi OS Trixie. Communication with the Pi will be through the Pi's wireless hotspot or WiFi. More details will be provided in [Raspberry Pi guide].
@@ -62,4 +61,4 @@ In the small part organizer:
 MASLAB game differs from year to year. More details about the game will be released during the first week.
 
 ## Next steps
-Now that you are through with the introduction, please proceed to [Electrical guide](2-Electrical) and [Raspberry Pi guide](3-Raspberry-Pi) to get started!
+Now that you are through with the introduction, please proceed to [Electrical guide](../electrical) and [Raspberry Pi guide](../raspberry-pi) to get started!

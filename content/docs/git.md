@@ -1,7 +1,14 @@
 ---
 title: "Git"
 weight: 6
-draft: true
+keywords:
+- github
+- ssh
+- key
+- deploy
+- clone
+- repository
+# draft: true
 # bookFlatSection: false
 # bookToc: true
 # bookHidden: false
@@ -12,7 +19,7 @@ draft: true
 # bookIcon: ''
 ---
 
-# Git how-to
+# Git
 [Git](https://en.wikipedia.org/wiki/Git) is a software version control system to keep track of changes to your software development project. Git allows you to make and keep track of small updates ("commits") as you develop your software. These commits _should_ be safe checkpoints with descriptions of what changed such that you can revert to if your latest changes immobilize or destroy your robot. As such, they are also a great way to document your progress. Git also allows you to prototype with a separate copy of the software without affecting the main copy ("branch" out). Therefore, it is also a great tool to collaborate with others as you can have separate copies of the software and develop independently.
 
 ## Installation

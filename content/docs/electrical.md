@@ -1,14 +1,23 @@
 ---
 title: "Electrical"
-date: 2026-01-08T14:04:32-05:00
 weight: 2
-draft: true
+keywords:
+- motor
+- servo
+- raven
+- connector
+- encoder
+- electric
+- battery
+- switch
+- header
+# draft: true
 # bookComments: false
 # bookSearchExclude: false
 # bookPostThumbnail: thumbnail.*
 ---
 
-# Electrical how-to
+# Electrical
 > [!NOTE]
 > As a soldering practice ~~and cost cutting effort 💸~~, some electrical part requires a bit of soldering. If you are new to soldering, need a refresh for soldering, or having any question/concern/problem, please reach out to a MASLAB staff during lab hours for assistance.
 > For soldering through-hole components, here is a good tutorial video: https://www.youtube.com/watch?v=DJH7VLGJ4fs
@@ -50,7 +59,7 @@ Details for how to connect the motor will be explained later. For now, we need t
 <!-- TODO: Add images -->
 #### Pi connector
 Raven is connected to the Raspberry Pi 5 through the standard Raspberry Pi 40 pins connector. It is the 20x2 pins located at the top most edge of the board. To populate it:
-:
+
 1. Install the connector such that the exposed pins go from the bottom (side with MASLAB logo) to the top (side with components).
 
 {{< figure src="/images/rpi_pins.png" width="75%" >}}
@@ -94,7 +103,7 @@ Raven also have digital IO ports that are connected to the Pi's GPIOs for button
 
 ### Connecting
 #### Power button connection
-The [power button](#power-button) you made previously plugs into the power connector. When the battery is connected, this button turns on the system. To turn off, check [Raspberry Pi guide](3-Raspberry-Pi#shutting-down).
+The [power button](#power-button) you made previously plugs into the power connector. When the battery is connected, this button turns on the system. To turn off, check [Raspberry Pi guide](../raspberry-pi#shutting-down).
 
 #### Motor connection
 Raven supports up to 5 motors with 5 optional encoders. If using encoder, make sure the the motor is modified according to [Motor](#motor). 
@@ -103,14 +112,10 @@ Each motor [terminal block](#motor-terminals) has 2 screw ports for power and gr
 
 Each encoder port is made of a row of [green, blue, yellow, and white pins](#encoder-pins). The top most encoder port is for motor 1 and bottom most port is for motor 5. From green to white (or from left to right if you did not use colored header):
 
-<p align="center">
-
 (Left to right)
 | Green       | Blue       | Yellow | White |
 |-------------|------------|--------|-------|
 | Hall ground | Hall power | C1     | C2    |
-
-</p>
 
 To connect the motor power, loosen the screws of a terminal block, insert the power (red) wire into one screw ports and ground (black) wire into the other screw port, and tighten the screws.
 
@@ -125,27 +130,14 @@ To connect the motor encoder, plug the connector with the encoder wires directly
 #### Servo connection
 Raven supports up to 4 servos. Each servo port is made of a column of [black, red, and yellow pins](#servo-pins). The left most servo port is for servo 1 and right most port is for servo 4. From black to yellow (or from top to bottom if you did not use colored header):
 
-<table style="margin: 0px auto;">
-  <tr>
-    <th>Black</th>
-    <td>Ground</td>
-  </tr>
-  <tr>
-    <th>Red</th>
-    <td>Power (5V)</td>
-  </tr>
-  <tr>
-    <th>Yellow</th>
-    <td>Signal</td>
-  </tr>
-</table>
+| Black  | Red   | Yellow |
+|--------|-------|--------|
+| Ground | Power | Signal |
 
 To connect the servo, install the servo connector directly onto the servo pins, matching brown to black, red to red, and orange to yellow.
 
 #### Digital pins connection
 Raven has 5 digital pins that pair with ground pins. Each digital port is made of a row of [your team's favorite colors](#switch-pins) and ground. The right side of the port is all connected to ground. The left side is as followed from top to bottom:
-
-<p align="center">
 
 | Left   | Right |
 |--------|-------|
@@ -154,8 +146,6 @@ Raven has 5 digital pins that pair with ground pins. Each digital port is made o
 | GPIO5  | GND   |
 | GPIO7  | GND   |
 | GPIO19 | GND   |
-
-</p>
 
 #### qwiic connection
 Raven also have 2 qwiic ports to support qwiic devices such as another inertial measurement sensor, color sensor, GPS, and even an LCD. Behind the connectors are connection to the I2C ports of the Raspberry Pi. The left connector is for I2C port 1 and right connector is for I2C port 2. More information about qwiic connection system can be found here: https://www.sparkfun.com/qwiic 

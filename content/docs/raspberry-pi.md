@@ -1,11 +1,13 @@
 ---
 title: "Raspberry Pi"
-date: 2026-01-08T14:04:32-05:00
 weight: 3
 keywords:
 - wifi
 - raspberry pi
 - ssh
+- tmux
+- vim
+- neovim
 # bookComments: false
 # bookSearchExclude: false
 # bookPostThumbnail: thumbnail.*
@@ -15,7 +17,7 @@ keywords:
 The machine given to you by staff is called a Raspberry Pi. For the purposes of this class, your Raspberry Pi comes preinstalled with a slightly customized copy of [Raspberry Pi OS -- Trixie](https://www.raspberrypi.com/news/trixie-the-new-version-of-raspberry-pi-os/).
 
 ## Setting up the Pi
-The Raspberry Pi 5 requires an active cooler to properly cool the board during heavy computations (i.e. /images processing). To install the cooler, follow the installation [guide](https://datasheets.raspberrypi.com/cooling/raspberry-pi-active-cooler-product-brief.pdf).
+The Raspberry Pi 5 requires an active cooler to properly cool the board during heavy computations (i.e. image processing). To install the cooler, follow the installation [guide](https://datasheets.raspberrypi.com/cooling/raspberry-pi-active-cooler-product-brief.pdf).
 
 {{< figure src="/images/pi5_cooler.png" width="50%" >}}
 
@@ -45,7 +47,7 @@ After your Pi has completed it's initialization, it should now be broadcasting a
 ### Connecting over SSH
 > [!NOTE]
 > Having a basic understanding of navigating a [shell](https://en.wikipedia.org/wiki/Shell_(computing)) through a [command-line interface](https://en.wikipedia.org/wiki/Command-line_interface) (CLI) to interact with a computer without a screen is an extremely useful skill. The shell you will use to connect to your Pi will differ system-to-system. On Apple laptops, this is done through the use of the **zsh**-shell, which can be accessed through spotlight by searching for "terminal". On a Windows machine, this is done through the Command Prompt, or the Windows PowerShell. On Linux devices, this is done through whatever shell you please. It is highly encouraged to your familiarize yourself with the [basics](https://ubuntu.com/tutorials/command-line-for-beginners) before proceeding.
-u
+
 To connect to the Pi, we use [Secure Shell (SSH)](https://en.wikipedia.org/wiki/Secure_Shell). SSH is an extremely powerful tool for remotely accessing another computer's shell. This class involves a significant amount of coding, and being able to do so in the absence of a desktop environment is a very valuable skill. SSH allows multiple agents to remotely attach the same machine, at the same time. Most modern operating systems like OS X, Ubuntu, and Windows come with SSH preinstalled. Double check by running `ssh -V` in a shell. If SSH is installed, you should get something similar to this:
 
 ```shell
@@ -94,13 +96,15 @@ On a Windows device, you can use the preinstalled "Remote Desktop Connection" ap
 {{< figure src="/images/rdp.png" width="50%" >}}
 
 There will be a warning about the computer's certificate. Feel free to select "Don't ask me again for connections to this computer" and click "Yes" to connect.
+
 {{< figure src="/images/rdp_warning.png" width="50%" >}}
 
 Enter username as `teamX` where X is your team number your team's password.
+
 {{< figure src="/images/rdp_signin.png" width="75%" >}}
 
 ### Connecting with VSCode
-[Visual Studio Code](https://code.visualstudio.com/) (VSCode) is a very popular code editor for many languages, including [Python](https://www.python.org/) which runs the [MASLAB library](4-Software#maslab-software-library).
+[Visual Studio Code](https://code.visualstudio.com/) (VSCode) is a very popular code editor for many languages, including [Python](https://www.python.org/) which runs the [MASLAB library](../software#maslab-software-library).
 
 We would recommend using VSCode to interact with the Pi for the majority of your robot software development. You can download the appropriate version at https://code.visualstudio.com. 
 
@@ -121,7 +125,6 @@ Alternatively, you can log in with RDP and use the graphical interface to shutdo
 
 {{< figure src="/images/pi_shutdown.png" width="75%" >}}
 
-
 ## Connecting the Pi to MIT Wifi
 After you've successfully connected to your Pi via either SSH or XRDP, you should now connect your Pi to the internet. This can be done either over SSH or XRDP through the desktop. It is recommended to connect to MIT's wifi using the desktop over XRDP.
 
@@ -131,8 +134,8 @@ However, this can also be done by using the `raspi-config` tool, navigating to t
 
 Once you have connected the Pi to WiFi, your computer should also have access to the Internet through the Pi's [hotspot](#pis-hotspot).
 
-# What's next?
+## What's next?
 Congratulations! You have set up and familiarized with the Pi. If you haven't already, please checkout the following how-tos to interact with the electronics, battery, and MASLAB software.
-* [Electrical how-to](2-Electrical)
-* [Software how-to](4-Software)
-* [Battery how-to](5-Battery)
+* [Electrical how-to](../electrical)
+* [Software how-to](../software)
+* [Battery how-to](../battery)

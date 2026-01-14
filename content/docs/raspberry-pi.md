@@ -15,11 +15,9 @@ keywords:
 The machine given to you by staff is called a Raspberry Pi. For the purposes of this class, your Raspberry Pi comes preinstalled with a slightly customized copy of [Raspberry Pi OS -- Trixie](https://www.raspberrypi.com/news/trixie-the-new-version-of-raspberry-pi-os/).
 
 ## Setting up the Pi
-The Raspberry Pi 5 requires an active cooler to properly cool the board during heavy computations (i.e. /images processing). To install the cooler, follow the installation guide at: https://datasheets.raspberrypi.com/cooling/raspberry-pi-active-cooler-product-brief.pdf 
+The Raspberry Pi 5 requires an active cooler to properly cool the board during heavy computations (i.e. /images processing). To install the cooler, follow the installation [guide](https://datasheets.raspberrypi.com/cooling/raspberry-pi-active-cooler-product-brief.pdf).
 
-<p align="center">
-<img src="/images/pi5_cooler.png" width="50%" />
-</p>
+{{< figure src="/images/pi5_cooler.png" alt="Raspberry Pi active cooler" >}}
 
 Along with the Pi you should have received a microSD card in a microSD card case labeled with your team name. You should insert the given microSD card into the microSD card slot found on the underside of the Pi.
 

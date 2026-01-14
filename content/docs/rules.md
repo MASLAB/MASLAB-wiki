@@ -1,7 +1,6 @@
 ---
 title: "Competition Rules"
 weight: 1
-draft: true
 # bookFlatSection: false
 # bookToc: true
 # bookHidden: false
@@ -32,7 +31,7 @@ Your robot's dimensions must not exceed 12 inches in either of the horizontal di
 
 The robot should be designed as and remain as a **single construction**. That is, your robot should not *eject* or *detach* any part of itself during the competition. 
 
- ### Interference
+### Interference
 
 The robot may not be designed to intentionally damage any persons, other robots or the game field. No part of the robot that could be confused for game pieces or field parts (e.g., large red or green items) may cross the dividing border on the field, although parts of the robot may be so colored if they do not cross the border. The robot must not commit other egregious interference against the opposing robot, as determined by the judges.
 
@@ -43,6 +42,8 @@ The robot may communicate over wireless networks (e.g. for telemetry or to offlo
 ## The Game
 
 ### Field Layout
+
+{{< figure src="/images/game_field.svg" width="100%" >}}
 
 The playable area for each robot is a square (dimensions roughly 10 ft) defined by a blue tape border on the ground. Each team’s field will be semantically, but not geometrically symmetrical, and share a blue border between them. In addition to the blue borders, each field will have an area outlined in red, an area outlined in green, a small area outlined in yellow, and a predefined 17” x 17” starting area. 5 red, 5 green, and 1 golden MASLAB Calorie Enhancement Canisters will be placed on the center line in a randomized order. A distance of at least 3 cm will be ensured between each can.
 

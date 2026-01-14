@@ -14,15 +14,11 @@ At the beginning of the class, each team will be provided a tote with parts, too
 MASLAB robot kit consists of two central components:  
 1. A Raspberry Pi 5 computer - A powerful mini computer to run computer vision and control your robot
 
-<p align="center">
-<img src="/images/pi5.png" width="50%" />
-</p>
+{{< figure src="/images/pi5.png" width="50%" >}}
 
 2. Raven - MASLAB custom circuit board to handle power and interaction with actuators and sensors
 
-<p align="center">
-<img src="/images/raven.png" width="50%" />
-</p>
+{{< figure src="/images/raven.png" width="50%" >}}
 
 MASLAB KitBot also includes motors with encoders and servos to mobilize the robot. Teams can opt to use other motors and servos. More about actuators will be covered in another guide.
 

@@ -18,9 +18,7 @@ draft: true
 <!-- TODO: Add images -->
 The wheel motors come with power and encoder wires. Below is the color code for the motor.
 
-<p align="center">
-<img src="/images/motor_pins_pololu.png" width="50%" />
-</p>
+{{< figure src="/images/motor_pins_pololu.png" width="50%" >}}
 
 <!-- The Red and White pins are for powering the motor. They can be screwed into the motor terminal blocks (to be explained later). The other pins are for encoders to count how many revolution has the motor rotated. To easily connect and disconnect these pins in the future, we can solder wires with headers onto them:
 
@@ -46,9 +44,7 @@ Details for how to connect the motor will be explained later. For now, we need t
 > [!WARNING]
 > Remember to solder the 40-pin header **FIRST** before anything else!  Otherwise, you may be unable to solder it in properly.
 
-<p align="center">
-<img src="/images/raven_position.jpeg" width="75%" />
-</p>
+{{< figure src="/images/raven_position.jpeg" width="75%" >}}
 
 ### Soldering
 <!-- TODO: Add images -->
@@ -57,9 +53,7 @@ Raven is connected to the Raspberry Pi 5 through the standard Raspberry Pi 40 pi
 :
 1. Install the connector such that the exposed pins go from the bottom (side with MASLAB logo) to the top (side with components).
 
-<p align="center">
-<img src="/images/rpi_pins.png" width="75%" />
-</p>
+{{< figure src="/images/rpi_pins.png" width="75%" >}}
 
 2. Make sure the pins are perfectly square with the board and solder the pins. Misaligned pins may not fit on the Pi.
 
@@ -67,9 +61,7 @@ Raven is connected to the Raspberry Pi 5 through the standard Raspberry Pi 40 pi
 #### Power button
 Raven needs a power button to turn on. The connector to this power button is located near top right corner of the `1R0` cube (an inductor). Grab the power button cable, the power button connector, and the power button. Solder the connector, matching the outline on the board. Solder the power button cable to the power button.
 
-<p align="center">
-<img src="/images/power_button.png" width="75%" />
-</p>
+{{< figure src="/images/power_button.png" width="75%" >}}
 
 
 #### Battery connector
@@ -78,37 +70,27 @@ Raven uses an XT30 connector at the right most edge to connect to the battery. I
 > [!CAUTION]
 > As a battery connector, soldering and using this connector incorrectly will likely destroy the Raven board AND the Pi if connected. Please make sure to follow the instruction, take a look at staff's reference board, and ask a MASLAB staff if you are unsure about anything.
 
-<p align="center">
-<img src="/images/battery_connector.png" width="75%" />
-</p>
+{{< figure src="/images/battery_connector.png" width="75%" >}}
 
 #### Motor terminals
 Raven uses 5 terminal blocks around the bottom edge to connect to motors. Each terminal block is for one motor. Before soldering the terminal blocks, assemble a row of 5 terminal blocks with the provided blocks. Then insert the row into the through holes. Make sure that the opening points to the edge of the board and solder.
 
-<p align="center">
-<img src="/images/motor_terminal.png" width="75%" />
-</p>
+{{< figure src="/images/motor_terminal.png" width="75%" >}}
 
 #### Encoder pins
 Each motor may be equipped with an encoder. The encoder pins are 4x5 pins located on the left side, above 2 black buttons. Populate Raven's encoder ports with green, blue, yellow, and white headers from left to right.
 
-<p align="center">
-<img src="/images/encoder_pins.png" width="50%" />
-</p>
+{{< figure src="/images/encoder_pins.png" width="50%" >}}
 
 #### Servo pins
 A typical servo has 3 pins for power and signal. The servo pins are 5x3 pins near the top right corner of the board. Populate Raven's servo ports with black, red, and yellow headers from top to bottom.
 
-<p align="center">
-<img src="/images/servo_pins.png" width="75%" />
-</p>
+{{< figure src="/images/servo_pins.png" width="75%" >}}
 
 #### Digital pins
 Raven also have digital IO ports that are connected to the Pi's GPIOs for buttons / limit switches / digital output. They are 2x5 pins located left of the servo pins. Populate the right column with black headers and left with any color like your team's unique board identifier 😁
 
-<p align="center">
-<img src="/images/io_pins.png" width="50%" />
-</p>
+{{< figure src="/images/io_pins.png" width="50%" >}}
 
 ### Connecting
 #### Power button connection
@@ -181,19 +163,13 @@ Raven also have 2 qwiic ports to support qwiic devices such as another inertial 
 #### Battery connection
 Raven uses an XT30 connector to connect to the battery. This is the yellow connector on the right side of the board. It is smaller than the XT60 connector on the battery and requires an adapter.
 
-<p align="center">
-<img src="/images/battery_adapter.png" width="50%" />
-</p>
+{{< figure src="/images/battery_adapter.png" width="50%" >}}
 
 #### Pi connection
 Raven is designed as a compact Raspberry Pi HAT (Hardware Attached on Top) board. It meant to be installed directly on top of the Pi 5. To properly secure the board to the Pi, use 4 sets of M2.5 standoffs, 20 mm threaded spacers, and screws. It should look similar to this without the ribbon cable and M2.5 standoffs in place of the bottom screws:
 
-<p align="center">
-<img src="/images/example_hat.png" width="50%" />
-</p>
+{{< figure src="/images/example_hat.png" width="50%" >}}
 
 With the standoffs, you can add holes on your robot to screw the Pi + Raven to the robot, keeping them in place and safe through your robot extreme tasks. Here is a picture of the Pi's layout to help with that:
 
-<p align="center">
-<img src="/images/pi5_layout.png" width="50%" />
-</p>
+{{< figure src="/images/pi5_layout.png" width="50%" >}}

@@ -31,9 +31,7 @@ maslab-update
 ```
 
 If everything goes well, you should see something similar to this in your shell:
-<p align="center">
-<img src="/images/maslab_update.png" width="75%" />
-</p>
+{{< figure src="/images/maslab_update.png" width="75%" >}}
 
 
 This command will grab the latest version of the Raven firmware and deploy it on the Raven, so make sure Raven is installed on the Pi before running this command. It will also install the latest version of our software library to use Raven.
@@ -160,9 +158,7 @@ raven_board.set_motor_target(Raven.MotorChannel.CH1, -4400)
 ## Servos
 Servos are position controlled motors that can move from -90 degree to 90 degree. Their signal is based on a [timed pulse](https://en.wikipedia.org/wiki/Servo_control). Typically, 1000us means -90 degree and 2000us means 90 degree. Some servo may have different values.
 
-<p align="center">
-<img src="/images/servo_timing.png" width="75%" />
-</p>
+{{< figure src="/images/servo_timing.png" width="75%" >}}
 
 Raven board supports up to [4 servos](2-Electrical#servo-connection). For each servo, you get to set the position in degree. Optionally, you can set the minimum and maximum pulse microsecond as `min_us` and `max_us` for you appropriate motor. Otherwise, they are defaulted to `min_us=1000` and `max_us=2000`. Here is an example of how to use them once you have [imported Raven](#import-raven).
 

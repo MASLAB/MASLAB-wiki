@@ -35,44 +35,32 @@ The battery system is packages with several components for safe battery usage. H
 ### LiPo battery
 The LiPo battery for the Pi is a LiPo battery with 3 cells connected in series (3S battery) with 5200mAh. This should keeps the robot fully **running for ~2 hours**, or **idling for ~6 hours**. The battery has an XT60 connector for power output and a JST-XH balancing lead for monitoring individual cells. Read the manufacturer's manual for more information.
 
-<p align="center">
-<img src="/images/battery.jpg" width="50%" />
-</p>
+{{< figure src="/images/battery.jpg" width="50%" >}}
 
 ### LiPo charger
 The charger included is a LiPo balancing lead charger. It charges and monitor individual battery cell's voltage through the balancing lead to make sure no cell exceeds the rated voltage of LiPo battery (4.2V). The charger is designed to charge at up to 2000mA per cell and supports 2 or 3 cells battery. It does **NOT** support charging **2 batteries at the same time**. Read the manufacturer's manual for more information.
 
-<p align="center">
-<img src="/images/charger.jpg" width="50%" />
-</p>
+{{< figure src="/images/charger.jpg" width="50%" >}}
 
 ### LiPo safety bag
 Two fireproof bags are provided for storing the batteries while not in use.
 
-<p align="center">
-<img src="/images/safety_bag.jpg" width="50%" />
-</p>
+{{< figure src="/images/safety_bag.jpg" width="50%" >}}
 
 <!-- ## Fused extension cable
 For additional protection when the battery is not plugged into the [Raven board](2-Electrical#hardwares), a 30A fused cable is provided for overcurrent protection. The fuse is replacable but let's do our best to never have to replace it.
 
-<p align="center">
-<img src="/images/fused_cable.jpg" width="50%" />
-</p> -->
+{{< figure src="/images/fused_cable.jpg" width="50%" >}} -->
 
 ### Switch extension cable
 In case the robot becomes sentient and goes on a rampage, something is burning, or any other emergency situation, a switch extension cable is provided. The switch will turn off connection to the battery and cut off power supply to the robot.
 
-<p align="center">
-<img src="/images/switch_cable.jpg" width="50%" />
-</p>
+{{< figure src="/images/switch_cable.jpg" width="50%" >}}
 
 ### Low voltage monitor
 Low voltage monitors are provided to make sure that the battery cell voltages do not fall below a safety threshold (3.3V) during use. They continuously monitor the voltages through the safety leads and let out a loud a buzz whenever any cell reaches the safety threshold.
 
-<p align="center">
-<img src="/images/voltage_monitor.png" width="50%" />
-</p>
+{{< figure src="/images/voltage_monitor.png" width="50%" >}}
 
 ## Inspection
 
@@ -83,9 +71,7 @@ Lipo batteries can be physically damaged (puncture, bend, etc) or electrically d
 #### Swollen battery
 Badly damaged LiPo battery will swell. Check for signs of battery swelling. For reference, the left battery is a normal battery and the right battery is damaged.
 
-<p align="center">
-<img src="/images/lipo_swollen.jpg" width="75%" />
-</p>
+{{< figure src="/images/lipo_swollen.jpg" width="75%" >}}
 
 > [!TIP]
 > Even though our battery has a hard plastic casing, a swelling battery may cause the shell to warp and no longer sits flat on the table.
@@ -96,13 +82,9 @@ Badly damaged LiPo battery will swell. Check for signs of battery swelling. For 
 #### Leads
 The batteries may be subjected to many rounds of plug-unplugs, scraping, electrical problems, etc. These may cause damages to the insulation and the connectors. Please check the wires for any sign of burns, and exposed conductors. Here is some refence for exposed wire and damaged connector:
 
-<p align="center">
-<img src="/images/wire_damage.jpg" width="75%" />
-</p>
+{{< figure src="/images/wire_damage.jpg" width="75%" >}}
 
-<p align="center">
-<img src="/images/xt60_damage.jpg" width="75%" />
-</p>
+{{< figure src="/images/xt60_damage.jpg" width="75%" >}}
 
 ### Electrical inspection
 Cell voltage is a good indicator of battery health. Plug in the [low voltage monitor](#low-voltage-monitor) to check for cell voltages. The cell voltages should read **between 3.3V and 4.2V** for a healthy LiPo battery.
@@ -137,9 +119,7 @@ Here is a general list of steps for charging the batteries. For more information
 4. Wait for the charger LED to turn from red 🔴 to blue 🔵. 
 5. **Do not leave the battery unattended while charging. Any battery charging without a team member nearby will be confiscated.** 
 
-<p align="center">
-<img src="/images/charger_connect.jpg" width="75%" />
-</p>
+{{< figure src="/images/charger_connect.jpg" width="75%" >}}
 
 > [!CAUTION]
 > This LiPo charger is simple. Too simple for charging EVERY kind of battery. It can destroy the batteries, itself, and burn down your place if misused. Therefore, here is a list of DO-NOTs:
@@ -165,9 +145,7 @@ Please connect the battery only to a switch cables. **DO NOT CONNECT THE BATTERY
 
 ### Full battery connection diagram
 
-<p align="center">
-<img src="/images/battery_diagram.png" width="100%" />
-</p>
+{{< figure src="/images/battery_diagram.png" width="100%" >}}
 
 ### Using Pi with battery
 > [!CAUTION]

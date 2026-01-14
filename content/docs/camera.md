@@ -122,9 +122,7 @@ With /images processing, it is important to understand how color is represented.
 
 For example, `bgr(191, 112, 43)` to `bgr(89, 52, 20)` may come from the same object at different lighting angles yet have wildly different RGB values.
 
-<p align="center">
-<img src="/images/blue_shades.png", width="50%"/>
-</p>
+{{< figure src="/images/blue_shades.png" width="50%" >}}
 
 
 A better color space to compare would be [HSV](https://en.wikipedia.org/wiki/HSL_and_HSV). HSV is based on human perception of color and encodes color in 3 values: 
@@ -176,9 +174,7 @@ Along with exposure and white balance, there are other properties that you may w
 ### Calibration
 Due to the camera lens, captured images may be distorted, making straight features curved and curved features straight. For example:
 
-<p align="center">
-<img src="/images/distorted_image.png"/>
-</p>
+{{< figure src="/images/distorted_image.png" >}}
 
 This makes it difficult to accurately estimate the true object position as /images processing algorithms often assume the inputs are non-distorted images. 
 

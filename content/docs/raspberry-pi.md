@@ -17,31 +17,23 @@ The machine given to you by staff is called a Raspberry Pi. For the purposes of 
 ## Setting up the Pi
 The Raspberry Pi 5 requires an active cooler to properly cool the board during heavy computations (i.e. /images processing). To install the cooler, follow the installation [guide](https://datasheets.raspberrypi.com/cooling/raspberry-pi-active-cooler-product-brief.pdf).
 
-{{< figure src="/images/pi5_cooler.png" alt="Raspberry Pi active cooler" >}}
+{{< figure src="/images/pi5_cooler.png" width="50%" >}}
 
 Along with the Pi you should have received a microSD card in a microSD card case labeled with your team name. You should insert the given microSD card into the microSD card slot found on the underside of the Pi.
 
-<p align="center">
-<img src="/images/pi5_sd.png" width="50%" />
-</p>
+{{< figure src="/images/pi5_sd.png" width="50%" >}}
 
 For WiFi connection, your kit should include a new USB to WiFi adapter. Unbox it and plug it into a USB 2.0 slot (black USB slot) on the Pi.
 
-<p align="center">
-<img src="/images/tp_link_nano.png" width="30%" />
-</p>
+{{< figure src="/images/tp_link_nano.png" width="30%" >}}
 
 For powering the Pi, you should have received a 27W AC-DC converter sporting a usb-C cable. The Pi comes equipped with a single usb-C port, which you should connect this power supply to.
 
-<p align="center">
-<img src="/images/pi5_power.png" width="50%" />
-</p>
+{{< figure src="/images/pi5_power.png" width="50%" >}}
 
 After inserting the microSD card, the WiFi adapter, and connecting the Pi to power, you should see an array of blinking lights and a momentary spinning of the on-board cooler. During this time, your Pi is booting and running its first-time-setup scripts. Once the power indicator (the, more often than not, green blinking light) momentarily turns **red**, the Pi will have rebooted. After rebooting, the power indicator should return to its green-blinking state and is ready for you to hop in.
 
-<p align="center">
-<img src="/images/pi5_led.png" width="50%" />
-</p>
+{{< figure src="/images/pi5_led.png" width="50%" >}}
 
 ## Using the Pi
 ### Pi's Hotspot
@@ -99,19 +91,13 @@ password: <ask staff>
 #### RDP on Windows
 On a Windows device, you can use the preinstalled "Remote Desktop Connection" app. For "Computer", enter your team's **hostname**, `teamXpi.local` where X is your team number.
 
-<p align="center">
-<img src="/images/rdp.png" width="50%" />
-</p>
+{{< figure src="/images/rdp.png" width="50%" >}}
 
 There will be a warning about the computer's certificate. Feel free to select "Don't ask me again for connections to this computer" and click "Yes" to connect.
-<p align="center">
-<img src="/images/rdp_warning.png" width="50%" />
-</p>
+{{< figure src="/images/rdp_warning.png" width="50%" >}}
 
 Enter username as `teamX` where X is your team number your team's password.
-<p align="center">
-<img src="/images/rdp_signin.png" width="75%" />
-</p>
+{{< figure src="/images/rdp_signin.png" width="75%" >}}
 
 ### Connecting with VSCode
 [Visual Studio Code](https://code.visualstudio.com/) (VSCode) is a very popular code editor for many languages, including [Python](https://www.python.org/) which runs the [MASLAB library](4-Software#maslab-software-library).
@@ -133,17 +119,13 @@ The `0` in the command indicates that we want to shutdown with 0 wait instead of
 
 Alternatively, you can log in with RDP and use the graphical interface to shutdown.
 
-<p align="center">
-<img src="/images/pi_shutdown.png" width="75%" />
-</p>
+{{< figure src="/images/pi_shutdown.png" width="75%" >}}
 
 
 ## Connecting the Pi to MIT Wifi
 After you've successfully connected to your Pi via either SSH or XRDP, you should now connect your Pi to the internet. This can be done either over SSH or XRDP through the desktop. It is recommended to connect to MIT's wifi using the desktop over XRDP.
 
-<p align="center">
-<img src="/images/pi_wifi.png" width="75%" />
-</p>
+{{< figure src="/images/pi_wifi.png" width="75%" >}}
 
 However, this can also be done by using the `raspi-config` tool, navigating to the "System Options" tab, selecting Wireless LAN, and following the prompts.
 

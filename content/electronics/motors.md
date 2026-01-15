@@ -1,5 +1,5 @@
 ---
-title: "Electrical"
+title: "Motor Controller / Raven Board"
 weight: 2
 keywords:
 - motor
@@ -17,7 +17,7 @@ keywords:
 # bookPostThumbnail: thumbnail.*
 ---
 
-# Electrical
+# Motor Controller / Raven Board
 > [!NOTE]
 > As a soldering practice ~~and cost cutting effort 💸~~, some electrical part requires a bit of soldering. If you are new to soldering, need a refresh for soldering, or having any question/concern/problem, please reach out to a MASLAB staff during lab hours for assistance.
 > For soldering through-hole components, here is a good tutorial video: https://www.youtube.com/watch?v=DJH7VLGJ4fs

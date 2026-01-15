@@ -16,3 +16,7 @@ target = 'assets'
 [[module.mounts]]
 source = 'static'
 target = 'assets'
+
+[params]
+  BookTheme = 'auto'
+  BookSection = '*'

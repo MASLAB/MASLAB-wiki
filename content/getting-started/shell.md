@@ -1,6 +1,6 @@
 ---
 title: "Terminal / Shell"
-weight: 5
+weight: 4
 # bookFlatSection: false
 # bookToc: true
 # bookHidden: false

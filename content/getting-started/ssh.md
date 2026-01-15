@@ -1,6 +1,6 @@
 ---
 title: "SSH / MOSH"
-weight: 4
+weight: 3
 keywords:
 - SSH
 - Mosh

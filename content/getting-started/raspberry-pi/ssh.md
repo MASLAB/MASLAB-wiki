@@ -21,6 +21,11 @@ Secure Shell, abbreviated as **SSH**, is an incredibly powerful tool for remotel
 
 Before interfacing with the Raspberry Pi, there are a few steps to setup its connectivity.
 
+> [!TIP]
+> If you're experiencing connectivity issues with your Raspberry Pi (stutters, freezing, etc.), it is recommended to use **MOSH** over **SSH**. 
+> 
+> **MOSH** is often more stable under intermittent connectivity and, in tandem with **tmux**, can provide a robust working environment.
+
 ## Hopping on the same LAN
 
 In order to communicate with your Raspberry Pi, we need to connect to the same Local Area Network or **LAN**, for short.

@@ -333,6 +333,75 @@ while True:
 https://learn.adafruit.com/adafruit-vl53l0x-micro-lidar-distance-sensor-breakout/overview
 https://learn.adafruit.com/adafruit-vl53l1x/overview 
 
+## Telemetry
+It's often nice to be able to quickly read telemetry from the robot, either for debugging or monitoring purposes. The MASLAB library ships with a small module called `streamer` that exposes a web streaming service, allowing you to visualize simple telemetry data, computer vision outputs, and robot odometry without an RDP connection.
+
+Initialize Streamer as follows:
+```python
+from streamer import Streamer
+s = Streamer()
+```
+This should start a web server. It should print out something like this:
+```
+!! MASLAB streamer is running !!
+ * Serving Flask app 'streamer.server'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.31.141.10:5000
+Press CTRL+C to quit
+```
+Navigate to the address that it displays (in the above case, http://10.31.141.10:5000) to see the web interface. Right now, it should be blank. The following functions are used to display data:
+- `s.set_data(data: Dict)`: write any kind of text data as key-value pairs.
+- `s.set_img(img: cv2.Mat)`: display an OpenCV image.
+- `s.update_odom_state(x: float, y: float, theta: float)`: set the current estimated robot position and heading (in radians).
+- `s.update_circles(circles: List[Tuple(float, float, str)])`: Render circles, for example the can positions. Each entry must be of the form `(x, y, c)` where `x` and `y` are the position and `c` is the color. Any [color that HTML recognizes](https://en.wikipedia.org/wiki/Web_colors) can be used.
+- `s.update_lines(lines: List[Tuple(float, float, float, float, str])`: Render lines. Each entry must be of the form `(x1, y1, x2, y2, c)`.
+
+Here is a minimal example:
+```python
+from server import Streamer
+import time
+import cv2
+import random
+import math
+
+stream = Streamer()
+
+pos = [0, 0, random.uniform(0, 2*math.pi)]  # x, y, theta
+
+# display an image
+stream.set_img(cv2.imread("test.jpg"))
+
+# continuously update data and odometry
+curr_data = {}
+while True:
+    pos[0] += math.cos(pos[2]) * 0.01
+    pos[1] += math.sin(pos[2]) * 0.01
+    pos[2] += random.uniform(-0.2, 0.2)
+    curr_data["timestamp"] = time.time()
+    curr_data["random_value"] = random.random()
+
+    # stream data and odometry
+    stream.set_data(curr_data)
+    stream.update_odom_state(pos[0], pos[1], pos[2])
+    stream.update_circles(
+        [
+            (0.40, 0.20, "red"),
+            (0.13, -0.40, "green"),
+        ]
+    )
+    stream.update_lines(
+        [
+            (0, 0, 0.75, 0.75, "blue"),
+        ]
+    )
+    time.sleep(0.05)
+```
+
+The interface should look something like this:
+
 ## What's next?
 Now that you have the software and firmware to run Raven. **AFTER** the battery lecture and reviewing the [battery guide](../battery). Feel free to power your Pi [with the battery](../battery#using-pi-with-battery) and see if you can make your motors and servos move!
 

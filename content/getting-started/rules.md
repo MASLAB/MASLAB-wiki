@@ -89,5 +89,5 @@ If the robot is damaged (either intentionally or unintentionally) by the opposin
 
 ### Human Interference
 
-Human interference from team members is prohibited, and violators may be disqualified from the match. The judge may provide minimal assistance to allow robots to get unstuck if both robots are stuck along the dividing line
+Human interference from team members is prohibited, and violators may be disqualified from the match. The judge may provide minimal assistance to allow robots to get unstuck if both robots are stuck along the dividing line.
 

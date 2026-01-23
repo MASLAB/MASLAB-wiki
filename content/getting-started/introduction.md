@@ -6,38 +6,36 @@ weight: 1
 # bookPostThumbnail: thumbnail.*
 --- 
 
-## MASLAB Robot Kit
-At the beginning of the class, each team will be provided a tote with parts, tools, and a small part organizer. There will also be other shared materials and components such as MDF boards and servos for your team to start building the robot. Each team can also request additional parts by filling out an online form. Please be mindful about shipping time and fee.
+# Introduction
 
-### Hardwares
-MASLAB robot kit consists of two central components:  
-1. A Raspberry Pi 5 computer - A powerful mini computer to run computer vision and control your robot
+Your task is to utilise the knowledge and tools at your disposal to **design**, **construct**, and **test** a robot. In the **final week** of this class, your robot is expected to accomplish the goal(s) described in the **[competition rules](../rules)** document. 
 
-{{< figure src="/images/pi5.png" width="50%" >}}
+Each team is provided a **MASLAB robot box** containing tools and components utilised in this class. In addition to the **robot box** provided, an allocation of **shared materials** such as **MDF** and **electronic servos** are available for use. In the likely event your team desires equipment not *immediately available*, an [external component order form](https://tinyurl.com/maslab-order) is available for use.
 
-2. Raven - MASLAB custom circuit board to handle power and interaction with actuators and sensors
+## MASLAB Robot Box Contents
+There are **two central components** to your **robot box**; the first of which is a **[Raspberry Pi](../raspberry-pi)**.
+{{< figure src="/images/rpi5.jpg" >}}
 
-{{< figure src="/images/raven.png" width="50%" >}}
+The second of which is the **Raven Board**, a MASLAB custom power electronics board designed to interact with actuators and sensors.
 
-MASLAB KitBot also includes motors with encoders and servos to mobilize the robot. Teams can opt to use other motors and servos. More about actuators will be covered in another guide.
+{{< figure src="/images/raven_position.jpeg" >}}
 
-Raven also includes 2 qwiic (https://www.sparkfun.com/qwiic) connector to connect the Pi 5 to other sensors. More about how to use sensors will be covered in another guide. 
+The **robot box** also includes motors with encoders and servos to mobilize the robot. While provided, teams are not required to use these motors and can opt to use other means. The **Raven Board** includes two **[qwiic connectors](https://www.sparkfun.com/qwiic)** to connect the **Raspberry Pi** to external sensors. To power these devices, **LiPo batteries** will be provided.
 
-To power these devices LiPo batteries will be provided.
 > [!CAUTION]
 > LiPo batteries are **DANGEROUS**. A tutorial about using LiPo battery will be provided during the first week of class. Do not use the battery until then. In addition, please review [battery guide](../battery) before using the robot with a battery. 
 
-### Softwares
-The Raspberry Pi 5 is already set up with Raspberry Pi OS Trixie. Communication with the Pi will be through the Pi's wireless hotspot or WiFi. More details will be provided in [Raspberry Pi guide].
+## Component Checklist
+Before leaving this section, verify the following items are present in your **robot box**. Please ask the staff if you are unsure which component is which.
 
-### Full Robot Kit Checklist
-Check that you have the following items. Please ask the staff if you are unsure which part is which.
-In the tote:
+> [!WARNING]
+> There are very limited spare parts so please be careful with your kit as it is highly unlikely that we can provide replacements.
+
 - [ ] TP-Link AC600 nano USB to WiFi adapter
 - [ ] Logitech Brio 101 webcam
 - [ ] Two LiPo batteries in fire safe bags
-- [ ] A set of colorful allen key
-- [ ] A set of multi-bit precision screwdriver
+- [ ] A set of colorful allen key wrenches
+- [ ] A multi-bit precision screwdriver
 - [ ] Two Pololu metal gear motors
 
 In the small part organizer:
@@ -50,15 +48,6 @@ In the small part organizer:
 - [ ] Raven board with a bag of electrical parts and a 40 pin connector
 - [ ] Two black battery monitors/alarms
 - [ ] A roller wheel
-- [ ] A set of big rubber wheels and hubs with snap rings and set screws
+- [ ] A set of large rubber wheels and hubs with snap rings and set screws
 - [ ] Some battery stickers for your enjoyment
 
-> [!WARNING]
-> There are very limited spare parts so please be careful with your kit as it is highly unlikely that we can provide replacements.
-
-
-## MASLAB Game Rule
-MASLAB game differs from year to year. More details about the game will be released during the first week.
-
-## Next steps
-Now that you are through with the introduction, please proceed to [Electrical guide](../electrical) and [Raspberry Pi guide](../raspberry-pi) to get started!

@@ -35,7 +35,7 @@ Assuming your Raspberry Pi has completed it's initialization, it should now be b
 Connect to this network and now both you and your Raspberry Pi will be on the same **LAN**.
 
 > [!WARNING]
-> After connecting to your Pi's wireless network, you will not have access to the "internet" until later on in this guide.
+> After connecting to your Pi's wireless network, you will not have access to the "internet" until [later](../wifi) on in this guide.
 
 ## Interfacing with the Raspberry Pi
 
@@ -65,18 +65,3 @@ Connect to the Raspberry Pi using either **SSH** or **MOSH** by executing `ssh <
     cols=90
     rows=8
     speed=2 >}}
-
-## Connecting the Raspberry Pi to MIT WiFi
-
-```
-nmcli connection add type wifi con-name "MIT SECURE" ifname wlan0 ssid "MIT SECURE" \
-    wifi-sec.key-mgmt wpa-eap \
-    802-1x.eap peap \
-    802-1x.phase2-auth mschapv2 \
-    802-1x.identity "your_username" \
-    802-1x.password "your_password"
-```
-
-```
-sudo nmcli device wifi hotspot ssid <hotspot name> password <hotspot password> ifname wlan0
-```

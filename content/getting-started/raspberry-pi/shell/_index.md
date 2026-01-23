@@ -9,6 +9,7 @@ weight: 4
 # bookSearchExclude: false
 # bookHref: ''
 # bookIcon: ''
+bookCollapseSection: true
 ---
 
 # Terminal / Shell

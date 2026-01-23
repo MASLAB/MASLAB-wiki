@@ -23,7 +23,7 @@ The second of which is the **Raven Board**, a MASLAB custom power electronics bo
 The **robot box** also includes motors with encoders and servos to mobilize the robot. While provided, teams are not required to use these motors and can opt to use other means. The **Raven Board** includes two **[qwiic connectors](https://www.sparkfun.com/qwiic)** to connect the **Raspberry Pi** to external sensors. To power these devices, **LiPo batteries** will be provided.
 
 > [!CAUTION]
-> LiPo batteries are **DANGEROUS**. A tutorial about using LiPo battery will be provided during the first week of class. Do not use the battery until then. In addition, please review [battery guide](../battery) before using the robot with a battery. 
+> LiPo batteries are **DANGEROUS**. A tutorial about using LiPo battery will be provided during the first week of class. Do not use the battery until then. In addition, please review **[battery guide](../../electronics/battery)** before using the robot with a battery. 
 
 ## Component Checklist
 Before leaving this section, verify the following items are present in your **robot box**. Please ask the staff if you are unsure which component is which.
